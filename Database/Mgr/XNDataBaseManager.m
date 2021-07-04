@@ -186,49 +186,71 @@ static NSString *const kNewMinuKey = @"new_minu";
     return objectsArray;
 }
 
-- (id)excuteAction:(XNDataBaseActionType)actionType sql:(NSString *)sql valuesArray:(NSArray *)valuesArray {
-    if (actionType == XNDataBaseActionTypeSelect) {
-        __block FMResultSet *resultSet;
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            resultSet = [db executeQuery:sql];
-        }];
-        return resultSet;
+- (id)excuteAction:(XNDataBaseActionType)actionType sql:(NSString *)sql valuesArray:(NSArray *)valuesArray batch:(BOOL)batch list:(NSArray *)list {
+    if (!batch) {
+        if (actionType == XNDataBaseActionTypeSelect) {
+            __block FMResultSet *resultSet;
+            [_dbQueue inDatabase:^(FMDatabase *db) {
+                resultSet = [db executeQuery:sql];
+            }];
+            return resultSet;
+        }
+        
+        if (actionType == XNDataBaseActionTypeInsert) {
+            __block BOOL isSuccess;
+            [_dbQueue inDatabase:^(FMDatabase *db) {
+                isSuccess = [db executeUpdate:sql withArgumentsInArray:valuesArray];
+            }];
+            return @(isSuccess);
+        }
+        
+        if (actionType == XNDataBaseActionTypeDelete) {
+            __block BOOL isSuccess;
+            [_dbQueue inDatabase:^(FMDatabase *db) {
+                isSuccess = [db executeUpdate:sql withArgumentsInArray:valuesArray];
+            }];
+            return @(isSuccess);
+        }
+        
+        if (actionType == XNDataBaseActionTypeUpdate) {
+            __block BOOL isSuccess;
+            [_dbQueue inDatabase:^(FMDatabase *db) {
+                isSuccess = [db executeUpdate:sql];
+            }];
+            return @(isSuccess);
+        }
+        return nil;
     }
-    
-    if (actionType == XNDataBaseActionTypeInsert) {
-        __block BOOL isSuccess;
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            isSuccess = [db executeUpdate:sql withArgumentsInArray:valuesArray];
-        }];
-        return @(isSuccess);
+    else {
+        if (actionType == XNDataBaseActionTypeInsert) {
+            __block BOOL suc = YES;
+            [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+                [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        NSArray *valuesArray = [XNDataBaseHelper getValuesFromObject:obj];
+                        [db executeUpdate:sql withArgumentsInArray:valuesArray];
+                        
+                        if(db.lastErrorCode > 0){
+                            *rollback = YES;
+                            NSLog(@"db异常：%@",db.lastErrorMessage);
+                            suc = NO;
+                        }
+                }];
+            }];
+            return @(suc);
+        }
+        return nil;
     }
-    
-    if (actionType == XNDataBaseActionTypeDelete) {
-        __block BOOL isSuccess;
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            isSuccess = [db executeUpdate:sql withArgumentsInArray:valuesArray];
-        }];
-        return @(isSuccess);
-    }
-    
-    if (actionType == XNDataBaseActionTypeUpdate) {
-        __block BOOL isSuccess;
-        [_dbQueue inDatabase:^(FMDatabase *db) {
-            isSuccess = [db executeUpdate:sql];
-        }];
-        return @(isSuccess);
-    }
-    return nil;
 }
 
 - (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
         XNDataBaseActionConfig *config = [XNDataBaseActionConfig new];
         config.actionType = actionType;
         !builderBlock? :builderBlock(config);
         [XNDataBaseActionBaseProvider fireAction:actionType config:config resultBlock:resultBlock buildSql:^id(NSString *sql, NSArray *values) {
-            return [self excuteAction:actionType sql:sql valuesArray:values];
+            return [self excuteAction:actionType sql:sql valuesArray:values batch:config.batch list:config.batchlist];
         }];
     });
 }

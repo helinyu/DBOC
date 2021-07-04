@@ -16,8 +16,9 @@
 - (void)fireAction;
 {
     NSMutableArray * propertiesArray = [[XNDataBaseHelper getPropertiesFromClass:self.config.tableMapClass].allKeys mutableCopy];
+    id aItem = self.config.batch? self.config.batchlist.firstObject : self.config.insertData;
     NSString * propStr = [propertiesArray componentsJoinedByString:@", "];
-    NSArray * valuesArray = [XNDataBaseHelper getValuesFromObject:self.config.insertData properties:propertiesArray];
+    NSArray * valuesArray = [XNDataBaseHelper getValuesFromObject:aItem properties:propertiesArray];
     NSMutableArray * placeHolderArray = [NSMutableArray array];
     [propertiesArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [placeHolderArray addObject:@"?"];

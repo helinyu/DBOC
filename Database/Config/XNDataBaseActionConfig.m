@@ -70,6 +70,15 @@
     };
 }
 
+-(XNDataBaseActionConfig * (^)(NSArray *batchList))bindBatchList;
+{
+    return ^id(NSArray *batchList){
+        self->_batchlist= batchList;
+        self->_batch = YES;
+        return self;
+    };
+}
+
 -(XNDataBaseActionConfig * (^)(id deleteData))bindDeleteData;
 {
     return ^id(id deleteData){

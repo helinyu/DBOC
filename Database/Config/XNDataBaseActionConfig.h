@@ -44,6 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) id insertData;
 -(XNDataBaseActionConfig * (^)(id insertData))bindInsertData;
 
+@property (nonatomic, strong, readonly) NSArray *batchlist;  // 插入、更新批量的
+-(XNDataBaseActionConfig * (^)(NSArray *insertList))bindBatchList;
+
+@property (nonatomic, assign) BOOL batch; // 批量处理
+-(XNDataBaseActionConfig * (^)(NSArray *insertList))bindBatch;
+
 #pragma mark - 删除
 @property (nonatomic, strong, readonly) id deleteData; // 删除的数据
 -(XNDataBaseActionConfig * (^)(id deleteData))bindDeleteData;
