@@ -1,0 +1,6 @@
+framework module Pods_DBOC_Example {
+  umbrella header "Pods-DBOC_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module DBOC {
+  umbrella header "DBOC-umbrella.h"
+
+  export *
+  module * { export * }
+}

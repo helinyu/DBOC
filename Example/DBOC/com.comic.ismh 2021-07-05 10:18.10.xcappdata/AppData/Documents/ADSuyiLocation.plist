@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ISOcountryCode</key>
+	<string></string>
+	<key>coordinate_time</key>
+	<real>2147483647</real>
+	<key>coordinate_type</key>
+	<integer>2</integer>
+	<key>latitude</key>
+	<real>0.0</real>
+	<key>longitude</key>
+	<real>0.0</real>
+</dict>
+</plist>
