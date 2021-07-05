@@ -1,7 +1,7 @@
 {
   "name": "DBOC",
   "version": "0.1.0",
-  "summary": "A short description of DBOC.",
+  "summary": "database more easy to use",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/helinyu/DBOC",
   "license": {
@@ -18,7 +18,6 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "DBOC/Classes/**/*",
   "dependencies": {
     "FMDB": [
 
