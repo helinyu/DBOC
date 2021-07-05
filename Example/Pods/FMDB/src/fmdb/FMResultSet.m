@@ -32,6 +32,7 @@
     return FMDBReturnAutoreleased(rs);
 }
 
+// 不在OC情况下的，销毁
 #if ! __has_feature(objc_arc)
 - (void)finalize {
     [self close];

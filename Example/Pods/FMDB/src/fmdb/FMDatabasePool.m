@@ -85,6 +85,7 @@ typedef NS_ENUM(NSInteger, FMDBTransaction) {
     return [self initWithPath:url.path flags:openFlags vfs:nil];
 }
 
+// 出事胡按一个数据库 可读写， 和创建的
 - (instancetype)initWithPath:(NSString*)aPath {
     // default flags for sqlite3_open
     return [self initWithPath:aPath flags:SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE];

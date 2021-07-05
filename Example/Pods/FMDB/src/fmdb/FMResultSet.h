@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMResultSet : NSObject
 
-@property (nonatomic, retain, nullable) FMDatabase *parentDB;
+@property (nonatomic, retain, nullable) FMDatabase *parentDB;// 这个数据库有父子关系的数据库？
 
 ///-----------------
 /// @name Properties

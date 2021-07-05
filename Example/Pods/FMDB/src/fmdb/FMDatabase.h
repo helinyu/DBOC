@@ -41,6 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary);
 
+// 检查模式： 被动、满、重新开始、 截断
 typedef NS_ENUM(int, FMDBCheckpointMode) {
     FMDBCheckpointModePassive  = 0, // SQLITE_CHECKPOINT_PASSIVE,
     FMDBCheckpointModeFull     = 1, // SQLITE_CHECKPOINT_FULL,
@@ -54,14 +55,19 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  The three main classes in FMDB are:
 
  - `FMDatabase` - Represents a single SQLite database.  Used for executing SQL statements.
+// 执行sql语句的单个对象
+ 
  - `<FMResultSet>` - Represents the results of executing a query on an `FMDatabase`.
+// 执行查询语句返回结果
+ 
  - `<FMDatabaseQueue>` - If you want to perform queries and updates on multiple threads, you'll want to use this class.
-
+// 查询和更新在多线程中， 一般使用这个类
+ 
  ### See also
  
- - `<FMDatabasePool>` - A pool of `FMDatabase` objects.
- - `<FMStatement>` - A wrapper for `sqlite_stmt`.
+ - `<FMDatabasePool>` - A pool of `FMDatabase` objects. // 这个不推荐使用
  
+ - `<FMStatement>` - A wrapper for `sqlite_stmt`. // sql 额stamt的集合
  ### External links
  
  - [FMDB on GitHub](https://github.com/ccgus/fmdb) including introductory documentation
@@ -85,22 +91,20 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 
 /** Whether should trace execution */
 
-@property (atomic, assign) BOOL traceExecution;
+@property (atomic, assign) BOOL traceExecution; // 跟踪异常
 
 /** Whether checked out or not */
-
 @property (atomic, assign) BOOL checkedOut;
 
 /** Crash on errors */
-
 @property (atomic, assign) BOOL crashOnErrors;
 
 /** Logs errors */
-
 @property (atomic, assign) BOOL logsErrors;
+//这个三个变量， 判断是否检查、 崩溃错误、日志错误
 
 /** Dictionary of cached statements */
-
+// 缓存的描述语句
 @property (atomic, retain, nullable) NSMutableDictionary *cachedStatements;
 
 ///---------------------
@@ -111,8 +115,12 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  
  An `FMDatabase` is created with a path to a SQLite database file.  This path can be one of these three:
 
- 1. A file system path.  The file does not have to exist on disk.  If it does not exist, it is created for you.
- 2. An empty string (`@""`).  An empty database is created at a temporary location.  This database is deleted with the `FMDatabase` connection is closed.
+ 1. A file system path.  The file does not have to exist on disk.  If it does not exist, it is created for you. 磁盘上的路径
+
+ 2. An empty string (`@""`).  An empty database is created at a temporary location.  This database is deleted with the `FMDatabase` connection is closed. 存放在temp中， fmdatabase关闭的时候回清空
+// 我们的图片太多的时候，我们是可以将它存放这里面，第二次进入的时候，再重新加载。
+
+ //内存中的数据库被创建， FMDatabase连接关闭的时候，数据库将会被销毁。
  3. `nil`.  An in-memory database is created.  This database will be destroyed with the `FMDatabase` connection is closed.
 
  For example, to create/open a database in your Mac OS X `tmp` folder:
@@ -132,6 +140,8 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  @return `FMDatabase` object if successful; `nil` if failure.
 
  */
+
+//创建数据库的路径
 
 + (instancetype)databaseWithPath:(NSString * _Nullable)inPath;
 
@@ -223,7 +233,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 
 /// Is the database open or not?
 
-@property (nonatomic) BOOL isOpen;
+@property (nonatomic) BOOL isOpen; // 是否打开
 
 /** Opening a new database connection
  
@@ -236,7 +246,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  @see close
  */
 
-- (BOOL)open;
+- (BOOL)open; // 打开操作
 
 /** Opening a new database connection with flags and an optional virtual file system (VFS)
 
@@ -266,6 +276,8 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 /** Opening a new database connection with flags and an optional virtual file system (VFS)
  
  @param flags one of the following three values, optionally combined with the `SQLITE_OPEN_NOMUTEX`, `SQLITE_OPEN_FULLMUTEX`, `SQLITE_OPEN_SHAREDCACHE`, `SQLITE_OPEN_PRIVATECACHE`, and/or `SQLITE_OPEN_URI` flags:
+ 
+flags: 这个是设置数据库是可以创建、读写等
  
  `SQLITE_OPEN_READONLY`
  
@@ -310,10 +322,11 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 
  @return `YES` if everything succeeds, `NO` on failure.
  */
-
+//是否是一个好的连接
 @property (nonatomic, readonly) BOOL goodConnection;
 
 
+// 执行更新的操作
 ///----------------------
 /// @name Perform updates
 ///----------------------
@@ -337,6 +350,9 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  @see lastErrorMessage
  @see [`sqlite3_bind`](http://sqlite.org/c3ref/bind_blob.html)
  */
+
+//插入、更新、删除的操作以及返回结果
+#pragma mark - 增、删、改、查
 
 - (BOOL)executeUpdate:(NSString*)sql withErrorAndBindings:(NSError * _Nullable *)outErr, ...;
 
@@ -399,6 +415,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
  There are two reasons why this distinction is important. First, the printf-style escape sequences can only be used where it is permissible to use a SQLite `?` placeholder. You can use it only for values in SQL statements, but not for table names or column names or any other non-value context. This method also cannot be used in conjunction with `pragma` statements and the like. Second, note the lack of quotation marks in the SQL. The `VALUES` clause was _not_ `VALUES ('%@')` (like you might have to do if you built a SQL statement using `NSString` method `stringWithFormat`), but rather simply `VALUES (%@)`.
  */
 
+// 根据字符串的方式进行处理这个sql的内容 ， 可以使用很多其他的内容精心处理 ， 能不能够搞一个这样的字符串进行处理？，应该是可以拼接出来这样的一个字符串的
 - (BOOL)executeUpdateWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 /** Execute single update statement
@@ -501,6 +518,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 
  */
 
+//执行语句
 - (BOOL)executeStatements:(NSString *)sql;
 
 /** Execute multiple SQL statements with callback handler
@@ -965,7 +983,7 @@ typedef NS_ENUM(int, FMDBCheckpointMode) {
 - (NSError *)lastError;
 
 
-// description forthcoming
+// 最大的尝试次数
 @property (nonatomic) NSTimeInterval maxBusyRetryTimeInterval;
 
 
@@ -1388,10 +1406,10 @@ typedef NS_ENUM(int, SqliteValueType) {
  */
 
 @interface FMStatement : NSObject {
-    void *_statement;
-    NSString *_query;
-    long _useCount;
-    BOOL _inUse;
+    void *_statement; // 语句
+    NSString *_query; // 查询
+    long _useCount; // 使用数量
+    BOOL _inUse; // 在使用
 }
 
 ///-----------------

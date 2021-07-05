@@ -80,15 +80,17 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     self = [super init];
     
     if (self != nil) {
-        
+//        创建了这个db的对象
         _db = [[[self class] databaseClass] databaseWithPath:aPath];
         FMDBRetain(_db);
         
+//         打开： 就是在这个路径下去创建
 #if SQLITE_VERSION_NUMBER >= 3005000
         BOOL success = [_db openWithFlags:openFlags vfs:vfsName];
 #else
         BOOL success = [_db open];
 #endif
+        
         if (!success) {
             NSLog(@"Could not create database queue for path %@", aPath);
             FMDBRelease(self);

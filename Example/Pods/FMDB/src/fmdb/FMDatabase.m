@@ -8,15 +8,16 @@
 #import <sqlite3.h>
 #endif
 
+// 6个重要的变量，
 @interface FMDatabase () {
-    void*               _db;
-    BOOL                _isExecutingStatement;
-    NSTimeInterval      _startBusyRetryTime;
+    void*               _db; // 数据库
+    BOOL                _isExecutingStatement; //正在执行的语句
+    NSTimeInterval      _startBusyRetryTime; // 开始繁忙的尝试次数
     
-    NSMutableSet        *_openResultSets;
-    NSMutableSet        *_openFunctions;
+    NSMutableSet        *_openResultSets; // 打开结果的集合
+    NSMutableSet        *_openFunctions; // 打开函数
     
-    NSDateFormatter     *_dateFormat;
+    NSDateFormatter     *_dateFormat; // 数据格式
 }
 
 NS_ASSUME_NONNULL_BEGIN
@@ -62,24 +63,27 @@ NS_ASSUME_NONNULL_END
     self = [super init];
     
     if (self) {
-        _databasePath               = [path copy];
-        _openResultSets             = [[NSMutableSet alloc] init];
-        _db                         = nil;
-        _logsErrors                 = YES;
-        _crashOnErrors              = NO;
-        _maxBusyRetryTimeInterval   = 2;
-        _isOpen                     = NO;
+        _databasePath               = [path copy]; // 数据库路径
+        _openResultSets             = [[NSMutableSet alloc] init]; // 打开的结果结合， 执行有关的结果，都是存放到这里
+        _db                         = nil; // 数据库
+        _logsErrors                 = YES; //错误日志
+        _crashOnErrors              = NO; // 崩溃日志
+        _maxBusyRetryTimeInterval   = 2; // 最大的尝试次数 ，2次默认
+        _isOpen                     = NO; // 打开状态
     }
     
     return self;
 }
 
+// 不在OC情况下的销毁
 #if ! __has_feature(objc_arc)
 - (void)finalize {
     [self close];
     [super finalize];
 }
 #endif
+
+// 释放
 
 - (void)dealloc {
     [self close];
@@ -146,20 +150,24 @@ NS_ASSUME_NONNULL_END
 
 - (const char*)sqlitePath {
     
+//     这个是内存上面的
     if (!_databasePath) {
         return ":memory:";
     }
     
+//    temp
     if ([_databasePath length] == 0) {
         return ""; // this creates a temporary database (it's an sqlite thing).
     }
     
+//     文件系统
     return [_databasePath fileSystemRepresentation];
     
 }
 
 #pragma mark Open and close database
 
+// 打开的操作
 - (BOOL)open {
     if (_isOpen) {
         return YES;
@@ -167,12 +175,14 @@ NS_ASSUME_NONNULL_END
     
     // if we previously tried to open and it failed, make sure to close it before we try again
     
+//     先关闭，
     if (_db) {
         [self close];
     }
     
     // now open database
 
+//    打开的操作
     int err = sqlite3_open([self sqlitePath], (sqlite3**)&_db );
     if(err != SQLITE_OK) {
         NSLog(@"error opening!: %d", err);
@@ -193,6 +203,7 @@ NS_ASSUME_NONNULL_END
     return [self openWithFlags:flags vfs:nil];
 }
 
+// 这个打开是带有一个虚拟文件系统的句柄
 - (BOOL)openWithFlags:(int)flags vfs:(NSString *)vfsName {
 #if SQLITE_VERSION_NUMBER >= 3005000
     if (_isOpen) {
@@ -201,18 +212,20 @@ NS_ASSUME_NONNULL_END
     
     // if we previously tried to open and it failed, make sure to close it before we try again
     
+    // 可能是上一次正在打开， 先关闭数据库， 然后
     if (_db) {
         [self close];
     }
     
     // now open database
-    
+    //  打开数据库
     int err = sqlite3_open_v2([self sqlitePath], (sqlite3**)&_db, flags, [vfsName UTF8String]);
     if(err != SQLITE_OK) {
         NSLog(@"error opening!: %d", err);
         return NO;
     }
     
+//     设置最大的尝试次数
     if (_maxBusyRetryTimeInterval > 0.0) {
         // set the handler
         [self setMaxBusyRetryTimeInterval:_maxBusyRetryTimeInterval];
@@ -227,10 +240,11 @@ NS_ASSUME_NONNULL_END
 #endif
 }
 
+// 关闭数据库的内容
 - (BOOL)close {
     
-    [self clearCachedStatements];
-    [self closeOpenResultSets];
+    [self clearCachedStatements]; // 清楚缓存的语句
+    [self closeOpenResultSets]; // 关闭打开的结果集合
     
     if (!_db) {
         return YES;
@@ -249,7 +263,7 @@ NS_ASSUME_NONNULL_END
                 sqlite3_stmt *pStmt;
                 while ((pStmt = sqlite3_next_stmt(_db, nil)) !=0) {
                     NSLog(@"Closing leaked statement");
-                    sqlite3_finalize(pStmt);
+                    sqlite3_finalize(pStmt); // 执行关于这个语句
                     retry = YES;
                 }
             }
@@ -343,6 +357,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
     return [_openResultSets count] > 0;
 }
 
+// 关闭结果的集合， 这个结果的集合是什么？ 应该是打开这个数据库的句柄， 比如，操作多个表的时候
 - (void)closeOpenResultSets {
     
     //Copy the set so we don't get mutation errors
@@ -350,8 +365,8 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
     for (NSValue *rsInWrappedInATastyValueMeal in openSetCopy) {
         FMResultSet *rs = (FMResultSet *)[rsInWrappedInATastyValueMeal pointerValue];
         
-        [rs setParentDB:nil];
-        [rs close];
+        [rs setParentDB:nil]; // 父类的db
+        [rs close]; // 结果句柄关闭
         
         [_openResultSets removeObject:rsInWrappedInATastyValueMeal];
     }
@@ -376,6 +391,8 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
     [_cachedStatements removeAllObjects];
 }
 
+// 通过sql缓存的statement
+//获取语句的缓存以及设置语句的缓存
 - (FMStatement*)cachedStatementForQuery:(NSString*)query {
     
     NSMutableSet* statements = [_cachedStatements objectForKey:query];
@@ -413,6 +430,8 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
 
 #pragma mark Key routines
 
+// 加密的处理，
+// sql 中的方法
 - (BOOL)rekey:(NSString*)key {
     NSData *keyData = [NSData dataWithBytes:(void *)[key UTF8String] length:(NSUInteger)strlen([key UTF8String])];
     
@@ -451,6 +470,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
         return NO;
     }
     
+//     秘钥的数据， db：数据库 ，[keyData bytes] 秘钥数据 (int)[keyData length]：秘钥长度
     int rc = sqlite3_key(_db, [keyData bytes], (int)[keyData length]);
     
     return (rc == SQLITE_OK);
@@ -490,6 +510,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
 }
 
 #pragma mark State of database
+
 
 - (BOOL)goodConnection {
     
@@ -676,6 +697,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
 
 - (void)extractSQL:(NSString *)sql argumentsList:(va_list)args intoString:(NSMutableString *)cleanedSQL arguments:(NSMutableArray *)arguments {
     
+//    这个没有看出来是在哪里执行的
     NSUInteger length = [sql length];
     unichar last = '\0';
     for (NSUInteger i = 0; i < length; ++i) {
@@ -799,6 +821,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
 - (FMResultSet *)executeQuery:(NSString *)sql withParameterDictionary:(NSDictionary *)arguments {
     return [self executeQuery:sql withArgumentsInArray:nil orDictionary:arguments orVAList:nil];
 }
+
 
 - (FMResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray*)arrayArgs orDictionary:(NSDictionary *)dictionaryArgs orVAList:(va_list)args {
     
@@ -1232,6 +1255,7 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
 - (BOOL)executeUpdate:(NSString*)sql withParameterDictionary:(NSDictionary *)arguments {
     return [self executeUpdate:sql error:nil withArgumentsInArray:nil orDictionary:arguments orVAList:nil];
 }
+
 
 - (BOOL)executeUpdate:(NSString*)sql withVAList:(va_list)args {
     return [self executeUpdate:sql error:nil withArgumentsInArray:nil orDictionary:nil orVAList:args];
