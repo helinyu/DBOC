@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DBOC'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'database more easy to use'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+      database for chain using
                        DESC
 
   s.homepage         = 'https://github.com/helinyu/DBOC'
@@ -31,8 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   # s.source_files = 'DBOC/Classes/**/*'
-  s.source = { :git => "https://github.com/helinyu/DBOC.git", :tag => "#{s.version}" }
-  
+  s.source_files = 'DBOC/Classes/**/*'
   # s.resource_bundles = {
   #   'DBOC' => ['DBOC/Assets/*.png']
   # }
