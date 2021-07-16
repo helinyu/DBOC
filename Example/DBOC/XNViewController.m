@@ -10,6 +10,8 @@
 #import <DBOC/DBOC.h> 
 #import "XNDataModel.h"
 
+#define kTest(x) test(x)
+
 @interface XNViewController ()
 
 @end
@@ -37,11 +39,16 @@
     [[XNDataBaseManager shareManager] action:XNDataBaseActionTypeInsert builder:^(XNDataBaseActionConfig *config) {
         config.b_class(XNDataModel).b_batchList(items);
         config.bindConditionValue(kCP(XNDataModel, name));
-//        config.bindWhereF(kCP(XNDataModel, name));
-        config.whereF(kCP(XNDataModel, name));
+//        config.whereF(kCP(XNDataModel, name));
+//        config.where(kCP(XNDataModel, name), XNDataValueRelationEqual, @"何林郁");
+        config.whereF(kCP(XNDataModel, name)).b_equalTo(@"何林郁");
     } then:^(BOOL result, id  _Nullable value) {
         NSLog(@"lt insert batch :%hhd, %@",result, value);
     }];
+}
+
+- (void)test:(NSString *)test {
+    NSLog(@"test : %@",test);
 }
 
 @end

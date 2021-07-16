@@ -212,4 +212,67 @@
     };
 }
 
+- (XNDataBaseActionConfig * (^)(id value))bindEqualTo;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationEqual);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindLessThanOrEqual;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationLessThanOrEqual);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindLessThan;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationLessThan);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindGreaterThan;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationGreaterThan);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindGreaterThanOrEqual;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationGreaterThanOrEqual);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindNotEqual;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationNotEqual);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id value))bindIn;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationIn);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
 @end

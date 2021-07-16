@@ -28,10 +28,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 //bindWhereF
 #define whereF(field) bindWhereF(field)
-//#define where(x, y, z) bindWhere(x,y,z)
-#define where(...) bindWhere(__VA_ARGS__)
+#define where(x, y, z) bindWhere(x,y,z)
+//#define where(...) bindWhere(__VA_ARGS__)
 
-
+#define b_equalTo(x) bindEqualTo(x)
+#define b_lessOrEqualTo(x) bindLessThanOrEqual(x)
+#define b_lessThan(x) bindLessThan(x)
+#define b_greaterThen(x) bindGreaterThan(x)
+#define b_greaterOrEqualTo(x) bindGreaterThanOrEqual(x)
+#define b_notEqualTo(x) bindNotEqual(x)
+#define b_In(x) bindIn(x)
 
 @interface XNDataBaseActionConfig : NSObject
 
@@ -61,8 +67,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindWhere; // where的情况下
 - (XNDataBaseActionConfig * (^)(id keyfield))bindWhereF; // where的情况下
 
+//  有关的不等式
+- (XNDataBaseActionConfig * (^)(id value))bindEqualTo;
+- (XNDataBaseActionConfig * (^)(id value))bindLessThanOrEqual;
+- (XNDataBaseActionConfig * (^)(id value))bindLessThan;
+- (XNDataBaseActionConfig * (^)(id value))bindGreaterThan;
+- (XNDataBaseActionConfig * (^)(id value))bindGreaterThanOrEqual;
+- (XNDataBaseActionConfig * (^)(id value))bindNotEqual;
+- (XNDataBaseActionConfig * (^)(id value))bindIn;
 
-// 更加方便的方法
 
 #pragma mark - 查询
 @property (nonatomic, strong, readonly) NSArray<NSString *> *queryColumnFields; // 查询指定的字段
