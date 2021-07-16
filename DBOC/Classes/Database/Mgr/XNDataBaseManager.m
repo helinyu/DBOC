@@ -252,6 +252,7 @@ static NSString *const kNewMinuKey = @"new_minu";
     });
 }
 
+// convinice method
 - (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 {
     [self action:XNDataBaseActionTypeSelect builder:builderBlock then:resultBlock];
@@ -267,6 +268,46 @@ static NSString *const kNewMinuKey = @"new_minu";
 - (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 {
     [self action:XNDataBaseActionTypeInsert builder:builderBlock then:resultBlock];
+}
+
+
+// sync method 同步方法
+- (NSDictionary *)asynAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
+{
+    __block NSMutableDictionary *mDict = [NSMutableDictionary new];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        XNDataBaseActionConfig *config = [XNDataBaseActionConfig new];
+        config.actionType = actionType;
+        !builderBlock? :builderBlock(config);
+        [XNDataBaseActionBaseProvider fireAction:actionType config:config resultBlock:^(BOOL result, id value){
+            [mDict setObject:@(result) forKey:kDB_actionFlagKey];
+            [mDict setObject:value forKey:kDB_actionResultKey];
+            dispatch_semaphore_signal(semaphore);
+        } buildSql:^id(NSString *sql, NSArray *values) {
+            return [self excuteAction:actionType sql:sql valuesArray:values batch:config.batch list:config.batchlist];
+        }];
+    });
+    
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    return [mDict copy];
+}
+
+- (NSDictionary *)syncSelectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    return [self asynAction:XNDataBaseActionTypeSelect builder:builderBlock];
+}
+- (NSDictionary *)syncUpdateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    return [self asynAction:XNDataBaseActionTypeUpdate builder:builderBlock];
+}
+- (NSDictionary *)syncDeleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    return [self asynAction:XNDataBaseActionTypeDelete builder:builderBlock];
+}
+- (NSDictionary *)syncInsertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+   return [self asynAction:XNDataBaseActionTypeInsert builder:builderBlock];
 }
 
 #pragma mark - help method

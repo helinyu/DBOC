@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define b_table(x) bindTableName(x.class)
 #define b_tableClass(x) bindTableMapClass(x.class)
 #define b_class(x) bindObjcClass(x.class)
+#define b_cls(x) b_class(x)
 
 #define b_batchList(x) bindBatchList(x)
 
@@ -51,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(XNDataBaseActionConfig * (^)(Class cls))bindTableMapClass;
 -(XNDataBaseActionConfig * (^)(Class cls))bindObjcClass;
 
+-(XNDataBaseActionConfig * (^)(id cls))bindT;
+
 @property (nonatomic, assign) BOOL keepOriginData; // 返回数据是否转化为模型， YES: 不转化array 、 dictionary NO: 转化， 默认是转化
 -(XNDataBaseActionConfig * (^)(BOOL))bindKeepOrigin;
 
@@ -66,6 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword,id keyfield, XNDataValueRelation relate, id value))bindCondition; // 控制的条件
 - (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindWhere; // where的情况下
 - (XNDataBaseActionConfig * (^)(id keyfield))bindWhereF; // where的情况下
+
+- (XNDataBaseActionConfig * (^)(NSInteger count))limitCount; // limit count 的情况下
 
 //  有关的不等式
 - (XNDataBaseActionConfig * (^)(id value))bindEqualTo;

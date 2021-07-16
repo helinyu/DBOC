@@ -10,6 +10,9 @@
 @class XNDataBaseTableConfig, XNDataBaseActionConfig;
 
 
+#define kDB_actionFlagKey @"dboc.action.suc.flag"
+#define kDB_actionResultKey @"dboc.action.result"
+
 #define kDBMgr ([XNDataBaseManager shareManager])
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,6 +33,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 - (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 - (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+
+#pragma mark - sync method
+// 同步的的请求方式， 这个不推荐使用
+
+- (NSDictionary *)asynAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
+
+- (NSDictionary *)syncSelectBuilder:(DatabaseActionConfigBlock)builderBlock;
+- (NSDictionary *)syncUpdateBuilder:(DatabaseActionConfigBlock)builderBlock;
+- (NSDictionary *)syncDeleteBuilder:(DatabaseActionConfigBlock)builderBlock;
+- (NSDictionary *)syncInsertBuilder:(DatabaseActionConfigBlock)builderBlock;
 
 @end
 

@@ -20,6 +20,9 @@ it, simply add the following line to your Podfile:
 pod 'DBOC'
 ```
 
+# 0x 01
+> 同步获取的方式，暂时先不支持，同事也不推荐使用
+
 ## Author
 
 helinyu, 2319979647@qq.com

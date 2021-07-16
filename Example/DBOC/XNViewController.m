@@ -39,9 +39,25 @@
     [kDBMgr selectBuilder:^(XNDataBaseActionConfig *config) {
         config.b_class(XNDataModel).b_batchList(items);
         config.bindConditionValue(kCP(XNDataModel, name));
-        config.whereF(kCP(XNDataModel, name)).b_equalTo(@"何林郁");
+        config.whereF(kCP(XNDataModel, name)).b_equalTo(@"何林郁").limitCount(4);
     } then:^(BOOL result, id  _Nullable value) {
         NSLog(@"lt insert batch :%hhd, %@",result, value);
+    }];
+    
+//     处理这个内容
+    NSDictionary *dict = [kDBMgr syncSelectBuilder:^(XNDataBaseActionConfig *config) {
+        config.b_class(XNDataModel);
+        config.b_cls(XNDataModel);
+    }];
+    NSLog(@"dict ");
+    
+    [kDBMgr selectBuilder:^(XNDataBaseActionConfig *config) {
+//        config.bindTableMapClass([XNDataModel class]);
+//        config.bindT(XNDataModel);
+        config.b_class(XNDataModel);
+        config.b_cls(XNDataModel);
+    } then:^(BOOL result, id  _Nullable value) {
+        
     }];
 }
 

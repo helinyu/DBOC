@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, XNDataBaseActionLinkWordType) {
     XNDataBaseActionLinkWordTypeAnd, // and
     XNDataBaseActionLinkWordTypeOr, // or
     XNDataBaseActionLinkWordTypeOrderBy, // orderBy
+    XNDataBaseActionLinkWordTypeLimit, // limit
 };
 
 //@property (nonatomic, copy) NSString *where;

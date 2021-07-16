@@ -24,7 +24,8 @@
     };
 }
 
--(XNDataBaseActionConfig * (^)(Class cls))bindTableMapClass{
+-(XNDataBaseActionConfig * (^)(Class cls))bindTableMapClass
+{
     return ^id(Class cls) {
         if (!self.objectClass) {
             self->_objectClass = cls;
@@ -35,6 +36,14 @@
         }
         
         self->_tableMapClass = cls;
+        return self;
+    };
+}
+
+-(XNDataBaseActionConfig * (^)(id cls))bindT;
+{
+    return ^id(id cls) {
+        self->_tableMapClass = [cls class];
         return self;
     };
 }
@@ -115,12 +124,12 @@
             if (self.currentLinkWordCondition.conditionFullFill) {
                 XNDataBaseActionLinkWord *newLinkWord = [XNDataBaseActionLinkWord new];
                 newLinkWord.linkWord = linkword;
-//                if (self.currentLinkWordCondition.isContainer) {
-//                    self.currentLinkWordCondition.condition.nextLinkWordCondition = newLinkWord;
-//                }
-//                else {
-                    self.currentLinkWordCondition.nextLinkWord = newLinkWord;
-//                }
+                //                if (self.currentLinkWordCondition.isContainer) {
+                //                    self.currentLinkWordCondition.condition.nextLinkWordCondition = newLinkWord;
+                //                }
+                //                else {
+                self.currentLinkWordCondition.nextLinkWord = newLinkWord;
+                //                }
             }
             else {
                 NSAssert(1 > 2, @"请检查你的设置语句，重复设置了判断条件");
@@ -167,6 +176,15 @@
     return ^id(id keyfield){
         self.bindLinkword(XNDataBaseActionLinkWordTypeWhere);
         self.bindConditionValue(keyfield);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(NSInteger count))limitCount; // limit count 的情况下
+{
+    return ^id(NSInteger count){
+        self.bindLinkword(XNDataBaseActionLinkWordTypeLimit);
+        self.bindConditionValue(@(count));
         return self;
     };
 }
