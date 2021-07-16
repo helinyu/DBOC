@@ -1,8 +1,8 @@
 {
   "name": "DBOC",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "summary": "database more easy to use",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "database for chain using",
   "homepage": "https://github.com/helinyu/DBOC",
   "license": {
     "type": "MIT",
@@ -13,11 +13,12 @@
   },
   "source": {
     "git": "https://github.com/helinyu/DBOC.git",
-    "tag": "0.1.0"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "9.0"
   },
+  "source_files": "DBOC/Classes/**/*",
   "dependencies": {
     "FMDB": [
 

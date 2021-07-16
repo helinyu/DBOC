@@ -1,5 +1,5 @@
 PODS:
-  - DBOC (0.1.0):
+  - DBOC (0.3.0):
     - FMDB
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DBOC: 47a2fa8dba805f1ca5add969fbed67e26f491bf1
+  DBOC: 0fb5aea6f9b50faa2028aaf7eea5849c410e34d6
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
 
 PODFILE CHECKSUM: ac84b38a1595148f529e84caab6473d301acad68

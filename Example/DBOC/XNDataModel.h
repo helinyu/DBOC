@@ -6,7 +6,7 @@
 //  Copyright © 2021 helinyu. All rights reserved.
 //
 
-#import "XNDatabaseModel.h"
+#import <DBOC/XNDatabaseModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -15,5 +15,7 @@
 #import "XNDataBaseActionCondition.h"
 #import "XNDataBaseActionLinkWord.h"
 #import "XNDataBaseHelper.h"
+#import "XNDatabaseModelProtocol.h"
+#import "XNDatabaseModel.h"
 
 #endif /* DBOC_h */
