@@ -1,6 +1,6 @@
 {
   "name": "DBOC",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "summary": "database more easy to use",
   "description": "database for chain using",
   "homepage": "https://github.com/helinyu/DBOC",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/helinyu/DBOC.git",
-    "tag": "0.3.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "9.0"

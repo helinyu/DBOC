@@ -7,9 +7,7 @@
 //
 
 #import "XNViewController.h"
-#import "XNDataBaseManager.h"
-#import "XNDataBaseActionConfig.h"
-#import "XNDataBaseTableConfig.h"
+#import <DBOC/DBOC.h> 
 #import "XNDataModel.h"
 
 @interface XNViewController ()

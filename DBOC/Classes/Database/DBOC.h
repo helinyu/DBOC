@@ -17,5 +17,6 @@
 #import "XNDataBaseHelper.h"
 #import "XNDatabaseModelProtocol.h"
 #import "XNDatabaseModel.h"
+#import "XNDataBaseManager.h"
 
 #endif /* DBOC_h */

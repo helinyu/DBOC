@@ -7,168 +7,168 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039499C8A462B53574485FD1C2A0E760 /* XNDataBaseActionBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B076433AD16D42C0C25BDA1FA57497FC /* XNDataBaseActionBaseProvider.m */; };
-		0951B9E7F6D1327A282178263A5DFC8D /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE3034A916DED83058F7EE7876090C7 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1902AE7BC8D616ACE4FC814FC61A4248 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */; };
-		1A78F0EB4AA404C0D16ABB8A2B96C6ED /* XNDataBaseActionCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C3A2B7B31C74D6C68893568F5128C9 /* XNDataBaseActionCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C2A6C5C61C7FE5C482B35DF9CC6F83D /* XNDataBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B818B0BAA630A20704DC33997E0A0375 /* XNDataBaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F4D941A23514B6DD46F74CC1CA56F04 /* XNDataBaseTableConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C71379A1C89BA2DD837BF27AFA19F /* XNDataBaseTableConfig.m */; };
-		249A7AA3E71F34B9A5ED45DFB4F7B429 /* DBOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146AD0562D97228E95D6435A883C361 /* DBOC-dummy.m */; };
-		2FEF07EFDBB1D2E79FFEF94CC7A7A7A6 /* XNDataBaseActionLinkWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CCC06675D3690E4F69B1716689E23E /* XNDataBaseActionLinkWord.m */; };
-		451B2C8C9EFD6FE6F356FB2BE12BCC89 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624A2329DA3B81C85654CF04AFAE6DE /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		039499C8A462B53574485FD1C2A0E760 /* XNDataBaseActionBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 794961B0BDF0009B11017072022A1D0B /* XNDataBaseActionBaseProvider.m */; };
+		15C6BF831852EFE25A3D4555BC60EAC1 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F5050F82A26CC1B35685AF74F29FC1 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1755169DDF18063CE1EF757A58D2B9B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */; };
+		1CA990BDAA6A5E378C5985013582EDDF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624A2329DA3B81C85654CF04AFAE6DE /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1F4D941A23514B6DD46F74CC1CA56F04 /* XNDataBaseTableConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 992A441FF014C95AFF0DFE47C702E43A /* XNDataBaseTableConfig.m */; };
+		246558849B8A3293A51B6CF396DF9F72 /* XNDataBaseActionCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = 482EAB045D9ADEE0E4E897FEBF1502AE /* XNDataBaseActionCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249A7AA3E71F34B9A5ED45DFB4F7B429 /* DBOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC2E652E8D45356B4F83E68C2093C /* DBOC-dummy.m */; };
+		2FEF07EFDBB1D2E79FFEF94CC7A7A7A6 /* XNDataBaseActionLinkWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD6D53E50978C28585A2088F89056A /* XNDataBaseActionLinkWord.m */; };
+		31A247AB98A9B4F2BB56B366FCCA8074 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D7675B55C1BE46C7D3D375F223CE119D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		452B630E53CC68482E6523D4E35FAE2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */; };
-		46C299D805A91DD0A11C76C38790C64F /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D7735B8EBC221831E4D2A62D56D34CD4 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CB3DC6AA12B1213DFD3BA1340FF2A56 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC61B9D64EB918BF07B22972A918E87B /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4D19D2C60A6EC1639387677E899B52B3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D247B56F3C354FB04D528D1587258 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4FEDF0198941B8BEE548F92CA391441F /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F5050F82A26CC1B35685AF74F29FC1 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		508319016BA589E561C2581FD9083720 /* XNDataBaseActionDeleteProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CF516265B2AC18795ABDCD79A0EA2031 /* XNDataBaseActionDeleteProvider.m */; };
-		537362C8FB27F43347FF8C820282D5BF /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5089FBB0BEE025338645FE5430ADDCAC /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58FED3EEC0E40A7933DB694842148336 /* XNDataBaseActionUpdateProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB11BA267552381E0655FB98FE51C5B /* XNDataBaseActionUpdateProvider.m */; };
+		4936BD848A5B9626C4CDA1AF0F811830 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4983DC1580F5854B6A051CA7793E6937 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4981ACC583A2DBCE3F2446CAE0677F14 /* XNDataBaseActionQueryProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 1551904C5704519BDC75389965DC94A2 /* XNDataBaseActionQueryProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BBE6A36CFA6F7AC4AB82BCC316D1218 /* XNDatabaseModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 21BC0682883EEA9B0A0B80945ED0D42F /* XNDatabaseModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508319016BA589E561C2581FD9083720 /* XNDataBaseActionDeleteProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 544961BD18A0BFCD86697E1D91B2192E /* XNDataBaseActionDeleteProvider.m */; };
+		58CF6C9533C3AA459EF94964C4EDE343 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F518F5CE26E4D5B0AF64A54ADA4187 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58FED3EEC0E40A7933DB694842148336 /* XNDataBaseActionUpdateProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F65EAD1BE484E842BED20A746016DCE1 /* XNDataBaseActionUpdateProvider.m */; };
+		5A80D5C2D59B5EE2DED8C1E9AA29F944 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ABAC87F0D8409475F68A59DD49201C /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5EF561677763FFA27760BB6DE907B1C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */; };
-		61DE92A3C5474FADA4DE44BD22F9DBDD /* XNDataBaseActionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3D0776B9388BD3A65A15ADF140A81B /* XNDataBaseActionConfig.m */; };
-		678A52F6C48E4F8BAEC7C578B1A47405 /* XNDatabaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C82DEC4A74052D30BF13B672740BEF /* XNDatabaseModel.m */; };
-		6A86B467680A86768E0E1353A3F85FCF /* XNDataBaseActionCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 018A72197264DA585910BE67330E03FF /* XNDataBaseActionCondition.m */; };
-		70F6908ADBEAB140130C0873936AF996 /* XNDataBaseActionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B5A29934DD500D99BA449F69DD7EDDA /* XNDataBaseActionConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61DE92A3C5474FADA4DE44BD22F9DBDD /* XNDataBaseActionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1F59004BFD8584BA7F51618222E890 /* XNDataBaseActionConfig.m */; };
+		64F221262A3EC7D5DEA21F7C085558F8 /* XNDataBaseActionBaseProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 9252A3E800AF1234FCDFA500EB7DB054 /* XNDataBaseActionBaseProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66F67E5F3B9D7142B105BDE18043F88B /* XNDatabaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 250F75D6E3535194D6E62541F34B67F4 /* XNDatabaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		678A52F6C48E4F8BAEC7C578B1A47405 /* XNDatabaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 773A616FC56FA20561EE7C6BD37C42A2 /* XNDatabaseModel.m */; };
+		6A52E692ADE4FB7BC9C1E992BA1EE0E7 /* XNDataBaseActionUpdateProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A6FA241F93F7D15127D0CB13BD8692 /* XNDataBaseActionUpdateProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A86B467680A86768E0E1353A3F85FCF /* XNDataBaseActionCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1BC94816A783D987619CB7A2D3A9EB /* XNDataBaseActionCondition.m */; };
+		6B506BB6E07CEB26D5B0B19573B131A7 /* XNDataBaseActionLinkWord.h in Headers */ = {isa = PBXBuildFile; fileRef = A8FA0F3B6570A6B767F4A2FB1304EFDB /* XNDataBaseActionLinkWord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7763CD1454FB35FEF2A079A801000590 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5578B1407CA30A1C962B5BF1C25D303B /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CA8CA104D0CB175BCA6B64D19B136F /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A94C2D4203484063B0C2B01EEA97692 /* FMDB.framework */; };
-		79AD41DFC3912E9F08E613B79ABB41B9 /* XNDatabaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A76E37A2A3481EBCE33FD427586AF03 /* XNDatabaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D24375BF294841F23AEAA96DA745CBE /* XNDataBaseActionDeleteProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 624E0881E471045613676AAA105106F1 /* XNDataBaseActionDeleteProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8391734879A5DFF0994D03CF318DF591 /* Pods-DBOC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C93E48EC9CA2B7AE6D1EEE11A0C8D3E7 /* Pods-DBOC_Example-dummy.m */; };
 		8836531ACAF6BF54D308DBBF3FEAC85A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */; };
 		8F687BC8AEEA07F752D4727F4DA41AB3 /* Pods-DBOC_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C0D2960E37404AE1FDDF6DF3B23D54 /* Pods-DBOC_Tests-dummy.m */; };
 		9269309C21A963B2F4C75523ED02C5E7 /* Pods-DBOC_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C32A818626805036B344E5A4C55BF85E /* Pods-DBOC_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94C4491FE134B6172BCB1C133D8D4AF6 /* Pods-DBOC_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB13C20DA2AD1AD094A5BB0C149E1AA /* Pods-DBOC_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AAA5E10B28BE24C8E99E145FFEDA661 /* XNDataBaseActionQueryProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3E6BC64D438C8FB601DD769E89D222 /* XNDataBaseActionQueryProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B4B63D4616B46410A687934FBB1C262 /* XNDataBaseTableConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0872E4752C32FB353CF245B344A0B4ED /* XNDataBaseTableConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A05A6F110F95DDBCC999AB5091E8C8D9 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F518F5CE26E4D5B0AF64A54ADA4187 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B46C0CCBBC2785A3EB7254BE070515EF /* XNDataBaseActionAddProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2671A84E48C771A55895609FB7EAC7D4 /* XNDataBaseActionAddProvider.m */; };
-		BB44131D62767AD0D45F7F76DE884733 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC7FCB163982668F35644CC9927F08C /* FMDB-dummy.m */; };
-		C2CE6FEA4557ABDBE9F5283819E30206 /* XNDataBaseActionUpdateProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 45B6F2FFEF5DC2F8FCA36B1C42DC84C3 /* XNDataBaseActionUpdateProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2E539311B371EE61A4271F0802C5D82 /* XNDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BF2EA64029B61A778B469C839B9747 /* XNDataBaseManager.m */; };
-		C431C9CD0A3E0C51BE8D48205D9C347C /* DBOC.h in Headers */ = {isa = PBXBuildFile; fileRef = C56369167A6E1B9310CB4E49A0B33850 /* DBOC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1B3B19965176CF3D5A199FBA347D361 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4983DC1580F5854B6A051CA7793E6937 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7C1D24A91E304E0616F453C51D5C901 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5578B1407CA30A1C962B5BF1C25D303B /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E36B19B419217E3D50EF1A27A4F88943 /* XNDataBaseConstonts.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D45F68CC9BB608DE218D03C5B34AE1 /* XNDataBaseConstonts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6E1905C2B5BDF871E3B545687A927FD /* XNDatabaseModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = EF097128AA53AC9C88043A3AFE31B557 /* XNDatabaseModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E89C39B1005E271548F1D0E55424CCA4 /* XNDataBaseActionQueryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD5D204BCD0719BB33EB2F4ABFAF31 /* XNDataBaseActionQueryProvider.m */; };
-		EC2882080D3B25BD9A66C15CC7F4089A /* DBOC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB81E243EFFAD4D4F511D13BC6CDF90D /* DBOC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1D9E6A25A49E650D68120031D8A5239 /* XNDataBaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CB1D7C381403C061117B799121B7EAAE /* XNDataBaseHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2FB06EC8A0C81FAC5384B838870B8E2 /* XNDataBaseActionLinkWord.h in Headers */ = {isa = PBXBuildFile; fileRef = A8B8A8DD5C26FA15FED7F3A2F2F4E172 /* XNDataBaseActionLinkWord.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3A5A9815FF791DDE7ADA828E89F1790 /* XNDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60EE7C965221DB856E299A7FE2C5CA /* XNDataBaseHelper.m */; };
-		F5E2601433A9728A7D8FFEED7CFEC642 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ABAC87F0D8409475F68A59DD49201C /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FAD3A88BF62D84DD6E3E03A8F73FEE15 /* XNDataBaseActionBaseProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = B2B3158D426A145E4753C7013C1013D0 /* XNDataBaseActionBaseProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDC1676885ED88244F387135CF88075A /* XNDataBaseActionAddProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = CBFA2F61A7F62D3B35A41811327B1CED /* XNDataBaseActionAddProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE5D3B910FD234A81D0FB0C65E862AE2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D7675B55C1BE46C7D3D375F223CE119D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9A1C3B14A46DFA26936471C0549E6DA1 /* XNDataBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4115696FB9F05E9F2FD1461F03CA76 /* XNDataBaseManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E65A72DCCF005F088D1CEB38CFEB1C8 /* XNDataBaseActionDeleteProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E6718B1A6DF7711BCA3E6AC6E3317DD /* XNDataBaseActionDeleteProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB4D2342F04C8DA825A0ECCC13E0BA96 /* XNDataBaseHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBA6B84E2650552EB792B0549A561C6 /* XNDataBaseHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46C0CCBBC2785A3EB7254BE070515EF /* XNDataBaseActionAddProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 03598EE4C61F82C9F18A4AAC3100BD89 /* XNDataBaseActionAddProvider.m */; };
+		C2E539311B371EE61A4271F0802C5D82 /* XNDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5AF07153AAC78B47D0A3AD6B977AC /* XNDataBaseManager.m */; };
+		D0334FC00F46533071EC7EBC13738145 /* XNDataBaseActionAddProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7913CF721434D30C73DB59347EF421 /* XNDataBaseActionAddProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4EF555EDFE8157B34137F001E55E40F /* DBOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F8E0E8256BADB63212EFEFCFC53F7C3 /* DBOC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D851D069A84A631FDB1A1D0DEADD4E40 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC7FCB163982668F35644CC9927F08C /* FMDB-dummy.m */; };
+		DEF99E3B61F1E7AAC0F421515DD22E7A /* XNDataBaseTableConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D20866FD47F0B675EAA8B81EE19C31 /* XNDataBaseTableConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3879023289682BE9ECC63985B243263 /* XNDataBaseActionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = BB250A74F9CB722BFA8336A9CC918A71 /* XNDataBaseActionConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89C39B1005E271548F1D0E55424CCA4 /* XNDataBaseActionQueryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 9500ACB08BB02311400EC39C1E286566 /* XNDataBaseActionQueryProvider.m */; };
+		EBE77F2870C4DFFC85910FB11B545020 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5089FBB0BEE025338645FE5430ADDCAC /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1899280A2312074A20803300F4EF2F9 /* DBOC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B95244996A8F48267BD9FC394E49B7 /* DBOC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1A212B55FDA7C3E974D81ABC9E07BD9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D247B56F3C354FB04D528D1587258 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F3A5A9815FF791DDE7ADA828E89F1790 /* XNDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 349B9595EBF23F467CA136E5E67D18E8 /* XNDataBaseHelper.m */; };
+		F47B4C2F25B6F949CB4CDD9B9FC48CF8 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D7735B8EBC221831E4D2A62D56D34CD4 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4BECD753901EF46620C7DDA435C96CD /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE3034A916DED83058F7EE7876090C7 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F55F641857B06E90007BBCC6D87BB905 /* XNDataBaseConstonts.h in Headers */ = {isa = PBXBuildFile; fileRef = 13463164A31CA3D6721479E842D7BF57 /* XNDataBaseConstonts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5AD1C4478530FF4F6D1648BF1240373 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC61B9D64EB918BF07B22972A918E87B /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0AA6CFCBB499A20B5A7FBD5F50B16281 /* PBXContainerItemProxy */ = {
+		29A07BDB1DD4F1F5F67DB3F4E9873D97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E54572F7BC9E43F5F03EE67704AE8476;
-			remoteInfo = DBOC;
+			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
+			remoteInfo = FMDB;
 		};
-		465137907E6EEF303DEEB8101DB86299 /* PBXContainerItemProxy */ = {
+		618B3D471D45C71E4AA1BE8AF7E1978C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D974304FAE8BC747D4D71E7C6CAB5B3;
 			remoteInfo = "Pods-DBOC_Example";
 		};
-		5A4445F6D81BFB1E96CEAABCC562186C /* PBXContainerItemProxy */ = {
+		9D32715C247102C9BE24922220E6EE8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
 			remoteInfo = FMDB;
 		};
-		FD0B228B476E5252991C18358F402662 /* PBXContainerItemProxy */ = {
+		F0D3B5F149E210429A2B17B6F4CFA3C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8592E0E389D40AC17881400ADC67ABC0;
-			remoteInfo = FMDB;
+			remoteGlobalIDString = E54572F7BC9E43F5F03EE67704AE8476;
+			remoteInfo = DBOC;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0146AD0562D97228E95D6435A883C361 /* DBOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DBOC-dummy.m"; sourceTree = "<group>"; };
-		018A72197264DA585910BE67330E03FF /* XNDataBaseActionCondition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionCondition.m; sourceTree = "<group>"; };
+		03598EE4C61F82C9F18A4AAC3100BD89 /* XNDataBaseActionAddProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionAddProvider.m; sourceTree = "<group>"; };
 		05C68092A3C7E112797016956678594D /* Pods-DBOC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DBOC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		064769D19E30977163ACBC443997E760 /* Pods-DBOC_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DBOC_Tests-Info.plist"; sourceTree = "<group>"; };
-		0872E4752C32FB353CF245B344A0B4ED /* XNDataBaseTableConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseTableConfig.h; sourceTree = "<group>"; };
-		0B02BEF601D660E67589A96D0D8E61AB /* Pods_DBOC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBOC_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B02BEF601D660E67589A96D0D8E61AB /* Pods_DBOC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DBOC_Example.framework; path = "Pods-DBOC_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F1A7EC6D3223E6E77E571C20BB04313 /* DBOC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DBOC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0F8E0E8256BADB63212EFEFCFC53F7C3 /* DBOC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBOC.h; path = DBOC/Classes/Database/DBOC.h; sourceTree = "<group>"; };
 		11346101A3F6442CC182D12EC0048084 /* Pods-DBOC_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DBOC_Example-Info.plist"; sourceTree = "<group>"; };
-		13C8795155275FC5EBF569E797D80A80 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		13463164A31CA3D6721479E842D7BF57 /* XNDataBaseConstonts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseConstonts.h; sourceTree = "<group>"; };
+		1551904C5704519BDC75389965DC94A2 /* XNDataBaseActionQueryProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionQueryProvider.h; sourceTree = "<group>"; };
 		156E36C7292CE3F7FB7429C8BC43974A /* FMDB-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FMDB-Info.plist"; sourceTree = "<group>"; };
 		1624A2329DA3B81C85654CF04AFAE6DE /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		175ADEC1F5D593BE6A0F1E677D645C7F /* DBOC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DBOC-Info.plist"; sourceTree = "<group>"; };
+		174D64E2415EFEFE1995602C30BE2F97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1832FEC75B5488C8DEE68F4D0B96BDB3 /* Pods-DBOC_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DBOC_Tests.modulemap"; sourceTree = "<group>"; };
+		1C7913CF721434D30C73DB59347EF421 /* XNDataBaseActionAddProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionAddProvider.h; sourceTree = "<group>"; };
+		1E1BC94816A783D987619CB7A2D3A9EB /* XNDataBaseActionCondition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionCondition.m; sourceTree = "<group>"; };
 		2006CF2EF7DD785B8FB61AD5FC58840E /* Pods-DBOC_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DBOC_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2671A84E48C771A55895609FB7EAC7D4 /* XNDataBaseActionAddProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionAddProvider.m; sourceTree = "<group>"; };
+		21BC0682883EEA9B0A0B80945ED0D42F /* XNDatabaseModelProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDatabaseModelProtocol.h; sourceTree = "<group>"; };
+		250F75D6E3535194D6E62541F34B67F4 /* XNDatabaseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDatabaseModel.h; sourceTree = "<group>"; };
+		2987719AD0751781E45322EE9536310C /* DBOC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DBOC-Info.plist"; sourceTree = "<group>"; };
 		2A94C2D4203484063B0C2B01EEA97692 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB13C20DA2AD1AD094A5BB0C149E1AA /* Pods-DBOC_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DBOC_Example-umbrella.h"; sourceTree = "<group>"; };
-		2E9C71379A1C89BA2DD837BF27AFA19F /* XNDataBaseTableConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseTableConfig.m; sourceTree = "<group>"; };
-		45B6F2FFEF5DC2F8FCA36B1C42DC84C3 /* XNDataBaseActionUpdateProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionUpdateProvider.h; sourceTree = "<group>"; };
-		46D45F68CC9BB608DE218D03C5B34AE1 /* XNDataBaseConstonts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseConstonts.h; sourceTree = "<group>"; };
-		47C790EE25134D516AB6407A7EEFB070 /* DBOC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DBOC-prefix.pch"; sourceTree = "<group>"; };
+		31D20866FD47F0B675EAA8B81EE19C31 /* XNDataBaseTableConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseTableConfig.h; sourceTree = "<group>"; };
+		3346ABAA43BAA380E87487C2FDE1A246 /* DBOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DBOC.release.xcconfig; sourceTree = "<group>"; };
+		349B9595EBF23F467CA136E5E67D18E8 /* XNDataBaseHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseHelper.m; sourceTree = "<group>"; };
+		3A4115696FB9F05E9F2FD1461F03CA76 /* XNDataBaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseManager.h; sourceTree = "<group>"; };
+		482EAB045D9ADEE0E4E897FEBF1502AE /* XNDataBaseActionCondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionCondition.h; sourceTree = "<group>"; };
+		48FAC2E652E8D45356B4F83E68C2093C /* DBOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DBOC-dummy.m"; sourceTree = "<group>"; };
 		4983DC1580F5854B6A051CA7793E6937 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		4A911A506B502E9B53976E50658873AA /* Pods-DBOC_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DBOC_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4AD083D0DAD5612F827A73AA70405204 /* FMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.release.xcconfig; sourceTree = "<group>"; };
-		4EC82B061DF3AE4BAA8A378A9C3A0F91 /* DBOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DBOC.debug.xcconfig; sourceTree = "<group>"; };
 		4EE3034A916DED83058F7EE7876090C7 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		4FA96F52AF7EC32C1412DA9C49AE0552 /* DBOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DBOC.modulemap; sourceTree = "<group>"; };
 		5089FBB0BEE025338645FE5430ADDCAC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		544961BD18A0BFCD86697E1D91B2192E /* XNDataBaseActionDeleteProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionDeleteProvider.m; sourceTree = "<group>"; };
 		54F5050F82A26CC1B35685AF74F29FC1 /* FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-umbrella.h"; sourceTree = "<group>"; };
 		5578B1407CA30A1C962B5BF1C25D303B /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		55A957C1C30670583294D3FD52FBE6B1 /* Pods-DBOC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DBOC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		55C82DEC4A74052D30BF13B672740BEF /* XNDatabaseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDatabaseModel.m; sourceTree = "<group>"; };
-		5A60EE7C965221DB856E299A7FE2C5CA /* XNDataBaseHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseHelper.m; sourceTree = "<group>"; };
-		624E0881E471045613676AAA105106F1 /* XNDataBaseActionDeleteProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionDeleteProvider.h; sourceTree = "<group>"; };
+		5BFD6D53E50978C28585A2088F89056A /* XNDataBaseActionLinkWord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionLinkWord.m; sourceTree = "<group>"; };
+		5D1F59004BFD8584BA7F51618222E890 /* XNDataBaseActionConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionConfig.m; sourceTree = "<group>"; };
+		5E6718B1A6DF7711BCA3E6AC6E3317DD /* XNDataBaseActionDeleteProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionDeleteProvider.h; sourceTree = "<group>"; };
 		691E0AC1C52AED74C137F1A56BD364C1 /* Pods-DBOC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DBOC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6B5A29934DD500D99BA449F69DD7EDDA /* XNDataBaseActionConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionConfig.h; sourceTree = "<group>"; };
-		6E769C5EFC241459F50919842BC1F068 /* DBOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DBOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73C3A2B7B31C74D6C68893568F5128C9 /* XNDataBaseActionCondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionCondition.h; sourceTree = "<group>"; };
+		6E5C333A6ADE5BB3D7330FE48616CD99 /* DBOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DBOC.debug.xcconfig; sourceTree = "<group>"; };
+		6E769C5EFC241459F50919842BC1F068 /* DBOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DBOC.framework; path = DBOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A6FA241F93F7D15127D0CB13BD8692 /* XNDataBaseActionUpdateProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionUpdateProvider.h; sourceTree = "<group>"; };
+		773A616FC56FA20561EE7C6BD37C42A2 /* XNDatabaseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDatabaseModel.m; sourceTree = "<group>"; };
 		77C0D2960E37404AE1FDDF6DF3B23D54 /* Pods-DBOC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DBOC_Tests-dummy.m"; sourceTree = "<group>"; };
-		7A76E37A2A3481EBCE33FD427586AF03 /* XNDatabaseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDatabaseModel.h; sourceTree = "<group>"; };
-		7B43FB14318242301C04D6EB09AADB82 /* Pods_DBOC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBOC_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E54D409695D6D89E329641A2592AA51 /* DBOC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DBOC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		83BF2EA64029B61A778B469C839B9747 /* XNDataBaseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseManager.m; sourceTree = "<group>"; };
+		794961B0BDF0009B11017072022A1D0B /* XNDataBaseActionBaseProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionBaseProvider.m; sourceTree = "<group>"; };
+		7B43FB14318242301C04D6EB09AADB82 /* Pods_DBOC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DBOC_Tests.framework; path = "Pods-DBOC_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80A5AF07153AAC78B47D0A3AD6B977AC /* XNDataBaseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseManager.m; sourceTree = "<group>"; };
 		8509D05C825BBEBF02CA07D056E2F37D /* Pods-DBOC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DBOC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		88E87DE72A8BCA88326D37D604054FBC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BA3A7D9D5EECE2A59279F57AB4AFD4F /* Pods-DBOC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DBOC_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		90CCC06675D3690E4F69B1716689E23E /* XNDataBaseActionLinkWord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionLinkWord.m; sourceTree = "<group>"; };
 		9213A593489A249968EC9A931510A4A9 /* FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FMDB.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8B8A8DD5C26FA15FED7F3A2F2F4E172 /* XNDataBaseActionLinkWord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionLinkWord.h; sourceTree = "<group>"; };
+		9252A3E800AF1234FCDFA500EB7DB054 /* XNDataBaseActionBaseProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionBaseProvider.h; sourceTree = "<group>"; };
+		9500ACB08BB02311400EC39C1E286566 /* XNDataBaseActionQueryProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionQueryProvider.m; sourceTree = "<group>"; };
+		992A441FF014C95AFF0DFE47C702E43A /* XNDataBaseTableConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseTableConfig.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2B95244996A8F48267BD9FC394E49B7 /* DBOC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DBOC-umbrella.h"; sourceTree = "<group>"; };
+		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMDB.framework; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E0470E1CFFC9E1E4F63DB5DB5C426D /* DBOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DBOC.modulemap; sourceTree = "<group>"; };
+		A8FA0F3B6570A6B767F4A2FB1304EFDB /* XNDataBaseActionLinkWord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionLinkWord.h; sourceTree = "<group>"; };
 		AA103A55F436F4961F309FA9DF23B76A /* Pods-DBOC_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DBOC_Example.modulemap"; sourceTree = "<group>"; };
-		B076433AD16D42C0C25BDA1FA57497FC /* XNDataBaseActionBaseProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionBaseProvider.m; sourceTree = "<group>"; };
-		B2B3158D426A145E4753C7013C1013D0 /* XNDataBaseActionBaseProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionBaseProvider.h; sourceTree = "<group>"; };
 		B48E3C8F19480EDCFB9E8235788CC4EF /* Pods-DBOC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DBOC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B818B0BAA630A20704DC33997E0A0375 /* XNDataBaseManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseManager.h; sourceTree = "<group>"; };
 		B9ABAC87F0D8409475F68A59DD49201C /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		BB250A74F9CB722BFA8336A9CC918A71 /* XNDataBaseActionConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionConfig.h; sourceTree = "<group>"; };
 		C32A818626805036B344E5A4C55BF85E /* Pods-DBOC_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DBOC_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C56369167A6E1B9310CB4E49A0B33850 /* DBOC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBOC.h; sourceTree = "<group>"; };
-		C5DD5D204BCD0719BB33EB2F4ABFAF31 /* XNDataBaseActionQueryProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionQueryProvider.m; sourceTree = "<group>"; };
+		C3E31B101124B9BBB162CD62644B81E8 /* DBOC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DBOC-prefix.pch"; sourceTree = "<group>"; };
 		C93E48EC9CA2B7AE6D1EEE11A0C8D3E7 /* Pods-DBOC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DBOC_Example-dummy.m"; sourceTree = "<group>"; };
-		CB1D7C381403C061117B799121B7EAAE /* XNDataBaseHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseHelper.h; sourceTree = "<group>"; };
 		CB6151788848E623C9EB83A2E662DE65 /* Pods-DBOC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DBOC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CB81E243EFFAD4D4F511D13BC6CDF90D /* DBOC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DBOC-umbrella.h"; sourceTree = "<group>"; };
-		CBFA2F61A7F62D3B35A41811327B1CED /* XNDataBaseActionAddProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionAddProvider.h; sourceTree = "<group>"; };
-		CCB11BA267552381E0655FB98FE51C5B /* XNDataBaseActionUpdateProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionUpdateProvider.m; sourceTree = "<group>"; };
 		CD4D247B56F3C354FB04D528D1587258 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
 		CDDADFEACEDBB2F415EA13D48EDC2236 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF516265B2AC18795ABDCD79A0EA2031 /* XNDataBaseActionDeleteProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionDeleteProvider.m; sourceTree = "<group>"; };
 		D7675B55C1BE46C7D3D375F223CE119D /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
 		D7735B8EBC221831E4D2A62D56D34CD4 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 		D8F518F5CE26E4D5B0AF64A54ADA4187 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
-		DC3D0776B9388BD3A65A15ADF140A81B /* XNDataBaseActionConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionConfig.m; sourceTree = "<group>"; };
+		DCBA6B84E2650552EB792B0549A561C6 /* XNDataBaseHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseHelper.h; sourceTree = "<group>"; };
 		DDB84D9A0F15E735FC534A12711BC72D /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
 		DFC7FCB163982668F35644CC9927F08C /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		EE3E6BC64D438C8FB601DD769E89D222 /* XNDataBaseActionQueryProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionQueryProvider.h; sourceTree = "<group>"; };
-		EF097128AA53AC9C88043A3AFE31B557 /* XNDatabaseModelProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XNDatabaseModelProtocol.h; sourceTree = "<group>"; };
-		F765B68BDEAC79740264F588F350DC93 /* DBOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DBOC.release.xcconfig; sourceTree = "<group>"; };
+		E8918125087600E7A10D46A70647F6FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F65EAD1BE484E842BED20A746016DCE1 /* XNDataBaseActionUpdateProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionUpdateProvider.m; sourceTree = "<group>"; };
 		FC61B9D64EB918BF07B22972A918E87B /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		FD36278E2433C2F3A0E6A23B97373671 /* FMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +190,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F3B21A851C0695EF83D076A1DBF5D8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1755169DDF18063CE1EF757A58D2B9B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34E7D65234BAF28CC3CAE9902C94A8BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,17 +207,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		469DCE8284F336C7521D6DFA00BB86AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1902AE7BC8D616ACE4FC814FC61A4248 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A8DCBAB9312394B5E0485064733974 /* Mgr */ = {
+			isa = PBXGroup;
+			children = (
+				3A4115696FB9F05E9F2FD1461F03CA76 /* XNDataBaseManager.h */,
+				80A5AF07153AAC78B47D0A3AD6B977AC /* XNDataBaseManager.m */,
+			);
+			name = Mgr;
+			path = DBOC/Classes/Database/Mgr;
+			sourceTree = "<group>";
+		};
+		08D046D84DB60EF002B7BD63DEDB10EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				250F75D6E3535194D6E62541F34B67F4 /* XNDatabaseModel.h */,
+				773A616FC56FA20561EE7C6BD37C42A2 /* XNDatabaseModel.m */,
+				21BC0682883EEA9B0A0B80945ED0D42F /* XNDatabaseModelProtocol.h */,
+			);
+			name = Model;
+			path = DBOC/Classes/Database/Model;
+			sourceTree = "<group>";
+		};
 		0AD3807087F18118116F33810E8C56EB /* Pods-DBOC_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,19 +248,12 @@
 			path = "Target Support Files/Pods-DBOC_Example";
 			sourceTree = "<group>";
 		};
-		0B39FFC5E16D1C82ACF2156080C9BF85 /* Support Files */ = {
+		0C51EFEACA6A49EE98F0B1C069E96DFD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4FA96F52AF7EC32C1412DA9C49AE0552 /* DBOC.modulemap */,
-				0146AD0562D97228E95D6435A883C361 /* DBOC-dummy.m */,
-				175ADEC1F5D593BE6A0F1E677D645C7F /* DBOC-Info.plist */,
-				47C790EE25134D516AB6407A7EEFB070 /* DBOC-prefix.pch */,
-				CB81E243EFFAD4D4F511D13BC6CDF90D /* DBOC-umbrella.h */,
-				4EC82B061DF3AE4BAA8A378A9C3A0F91 /* DBOC.debug.xcconfig */,
-				F765B68BDEAC79740264F588F350DC93 /* DBOC.release.xcconfig */,
+				40AAB4282A9354CC5EDFDEA472D40D8A /* DBOC */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DBOC";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		250D9D5E51DAFB13A4F5CF7E5E21E5B7 /* iOS */ = {
@@ -250,13 +264,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		30D30EDD4767B882C382750D7E8A60C6 /* Mgr */ = {
+		40AAB4282A9354CC5EDFDEA472D40D8A /* DBOC */ = {
 			isa = PBXGroup;
 			children = (
-				B818B0BAA630A20704DC33997E0A0375 /* XNDataBaseManager.h */,
-				83BF2EA64029B61A778B469C839B9747 /* XNDataBaseManager.m */,
+				0F8E0E8256BADB63212EFEFCFC53F7C3 /* DBOC.h */,
+				80FD0254360B40073DE6755D697224A5 /* Config */,
+				07A8DCBAB9312394B5E0485064733974 /* Mgr */,
+				08D046D84DB60EF002B7BD63DEDB10EE /* Model */,
+				B7FBA27CA6F9769CE077364D3A392AC6 /* Pod */,
+				A24F8B886AAA306AAB0C1C0B5FFA749D /* Support Files */,
 			);
-			path = Mgr;
+			name = DBOC;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		43B8387F48E0A04EC374C0B443C1FA7A /* Products */ = {
@@ -286,15 +305,22 @@
 			path = "Target Support Files/Pods-DBOC_Tests";
 			sourceTree = "<group>";
 		};
-		67A5D0EB5BC4F9898671E423DA05D9C7 /* DBOC */ = {
+		6364F4932409C5C70A9A5E76AD3F4EE0 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				9E078374C4EA223BCF9E283DE000BE82 /* Database */,
-				F6149B06A3C7C9ABD6E89E464362826D /* Pod */,
-				0B39FFC5E16D1C82ACF2156080C9BF85 /* Support Files */,
+				1C7913CF721434D30C73DB59347EF421 /* XNDataBaseActionAddProvider.h */,
+				03598EE4C61F82C9F18A4AAC3100BD89 /* XNDataBaseActionAddProvider.m */,
+				9252A3E800AF1234FCDFA500EB7DB054 /* XNDataBaseActionBaseProvider.h */,
+				794961B0BDF0009B11017072022A1D0B /* XNDataBaseActionBaseProvider.m */,
+				5E6718B1A6DF7711BCA3E6AC6E3317DD /* XNDataBaseActionDeleteProvider.h */,
+				544961BD18A0BFCD86697E1D91B2192E /* XNDataBaseActionDeleteProvider.m */,
+				1551904C5704519BDC75389965DC94A2 /* XNDataBaseActionQueryProvider.h */,
+				9500ACB08BB02311400EC39C1E286566 /* XNDataBaseActionQueryProvider.m */,
+				75A6FA241F93F7D15127D0CB13BD8692 /* XNDataBaseActionUpdateProvider.h */,
+				F65EAD1BE484E842BED20A746016DCE1 /* XNDataBaseActionUpdateProvider.m */,
 			);
-			name = DBOC;
-			path = ../..;
+			name = Provider;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		68DB21AE5492FC581291330CF6E902BA /* Pods */ = {
@@ -305,35 +331,58 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9E078374C4EA223BCF9E283DE000BE82 /* Database */ = {
+		80FD0254360B40073DE6755D697224A5 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				C56369167A6E1B9310CB4E49A0B33850 /* DBOC.h */,
-				EC93E928C3D8A57F015F15D9C583BCD9 /* Config */,
-				30D30EDD4767B882C382750D7E8A60C6 /* Mgr */,
-				A239DE7B0DF6229D1289C66F7CEF0A00 /* Model */,
+				482EAB045D9ADEE0E4E897FEBF1502AE /* XNDataBaseActionCondition.h */,
+				1E1BC94816A783D987619CB7A2D3A9EB /* XNDataBaseActionCondition.m */,
+				BB250A74F9CB722BFA8336A9CC918A71 /* XNDataBaseActionConfig.h */,
+				5D1F59004BFD8584BA7F51618222E890 /* XNDataBaseActionConfig.m */,
+				A8FA0F3B6570A6B767F4A2FB1304EFDB /* XNDataBaseActionLinkWord.h */,
+				5BFD6D53E50978C28585A2088F89056A /* XNDataBaseActionLinkWord.m */,
+				13463164A31CA3D6721479E842D7BF57 /* XNDataBaseConstonts.h */,
+				31D20866FD47F0B675EAA8B81EE19C31 /* XNDataBaseTableConfig.h */,
+				992A441FF014C95AFF0DFE47C702E43A /* XNDataBaseTableConfig.m */,
+				AB19D126809A35D7AB991FBF36B0C714 /* Helper */,
+				6364F4932409C5C70A9A5E76AD3F4EE0 /* Provider */,
 			);
-			name = Database;
-			path = DBOC/Classes/Database;
+			name = Config;
+			path = DBOC/Classes/Database/Config;
 			sourceTree = "<group>";
 		};
-		A11D154B9DC54B356C783C5B61D5EB22 /* Helper */ = {
+		A24F8B886AAA306AAB0C1C0B5FFA749D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CB1D7C381403C061117B799121B7EAAE /* XNDataBaseHelper.h */,
-				5A60EE7C965221DB856E299A7FE2C5CA /* XNDataBaseHelper.m */,
+				A3E0470E1CFFC9E1E4F63DB5DB5C426D /* DBOC.modulemap */,
+				48FAC2E652E8D45356B4F83E68C2093C /* DBOC-dummy.m */,
+				2987719AD0751781E45322EE9536310C /* DBOC-Info.plist */,
+				C3E31B101124B9BBB162CD62644B81E8 /* DBOC-prefix.pch */,
+				A2B95244996A8F48267BD9FC394E49B7 /* DBOC-umbrella.h */,
+				6E5C333A6ADE5BB3D7330FE48616CD99 /* DBOC.debug.xcconfig */,
+				3346ABAA43BAA380E87487C2FDE1A246 /* DBOC.release.xcconfig */,
 			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DBOC";
+			sourceTree = "<group>";
+		};
+		AB19D126809A35D7AB991FBF36B0C714 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DCBA6B84E2650552EB792B0549A561C6 /* XNDataBaseHelper.h */,
+				349B9595EBF23F467CA136E5E67D18E8 /* XNDataBaseHelper.m */,
+			);
+			name = Helper;
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		A239DE7B0DF6229D1289C66F7CEF0A00 /* Model */ = {
+		B7FBA27CA6F9769CE077364D3A392AC6 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7A76E37A2A3481EBCE33FD427586AF03 /* XNDatabaseModel.h */,
-				55C82DEC4A74052D30BF13B672740BEF /* XNDatabaseModel.m */,
-				EF097128AA53AC9C88043A3AFE31B557 /* XNDatabaseModelProtocol.h */,
+				0F1A7EC6D3223E6E77E571C20BB04313 /* DBOC.podspec */,
+				174D64E2415EFEFE1995602C30BE2F97 /* LICENSE */,
+				E8918125087600E7A10D46A70647F6FE /* README.md */,
 			);
-			path = Model;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C38E43CAC46D8E3321714F4C03010F12 /* standard */ = {
@@ -354,20 +403,13 @@
 			name = standard;
 			sourceTree = "<group>";
 		};
-		CBDD6AA0AA3708D5C4C92A1046AEF56A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				67A5D0EB5BC4F9898671E423DA05D9C7 /* DBOC */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		CE722919203F5B19F3131936952CB279 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
 				C38E43CAC46D8E3321714F4C03010F12 /* standard */,
 				E3867D25A716FDC715F0CFF88B8D550F /* Support Files */,
 			);
+			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
@@ -375,7 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				CBDD6AA0AA3708D5C4C92A1046AEF56A /* Development Pods */,
+				0C51EFEACA6A49EE98F0B1C069E96DFD /* Development Pods */,
 				CF49E37C9722649D8E0EED9C6C0C349D /* Frameworks */,
 				68DB21AE5492FC581291330CF6E902BA /* Pods */,
 				43B8387F48E0A04EC374C0B443C1FA7A /* Products */,
@@ -416,54 +458,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EC93E928C3D8A57F015F15D9C583BCD9 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				73C3A2B7B31C74D6C68893568F5128C9 /* XNDataBaseActionCondition.h */,
-				018A72197264DA585910BE67330E03FF /* XNDataBaseActionCondition.m */,
-				6B5A29934DD500D99BA449F69DD7EDDA /* XNDataBaseActionConfig.h */,
-				DC3D0776B9388BD3A65A15ADF140A81B /* XNDataBaseActionConfig.m */,
-				A8B8A8DD5C26FA15FED7F3A2F2F4E172 /* XNDataBaseActionLinkWord.h */,
-				90CCC06675D3690E4F69B1716689E23E /* XNDataBaseActionLinkWord.m */,
-				46D45F68CC9BB608DE218D03C5B34AE1 /* XNDataBaseConstonts.h */,
-				0872E4752C32FB353CF245B344A0B4ED /* XNDataBaseTableConfig.h */,
-				2E9C71379A1C89BA2DD837BF27AFA19F /* XNDataBaseTableConfig.m */,
-				A11D154B9DC54B356C783C5B61D5EB22 /* Helper */,
-				F8CA6940A117D386E6A67D8DDE2B64CB /* Provider */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		F6149B06A3C7C9ABD6E89E464362826D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				7E54D409695D6D89E329641A2592AA51 /* DBOC.podspec */,
-				13C8795155275FC5EBF569E797D80A80 /* LICENSE */,
-				88E87DE72A8BCA88326D37D604054FBC /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		F8CA6940A117D386E6A67D8DDE2B64CB /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				CBFA2F61A7F62D3B35A41811327B1CED /* XNDataBaseActionAddProvider.h */,
-				2671A84E48C771A55895609FB7EAC7D4 /* XNDataBaseActionAddProvider.m */,
-				B2B3158D426A145E4753C7013C1013D0 /* XNDataBaseActionBaseProvider.h */,
-				B076433AD16D42C0C25BDA1FA57497FC /* XNDataBaseActionBaseProvider.m */,
-				624E0881E471045613676AAA105106F1 /* XNDataBaseActionDeleteProvider.h */,
-				CF516265B2AC18795ABDCD79A0EA2031 /* XNDataBaseActionDeleteProvider.m */,
-				EE3E6BC64D438C8FB601DD769E89D222 /* XNDataBaseActionQueryProvider.h */,
-				C5DD5D204BCD0719BB33EB2F4ABFAF31 /* XNDataBaseActionQueryProvider.m */,
-				45B6F2FFEF5DC2F8FCA36B1C42DC84C3 /* XNDataBaseActionUpdateProvider.h */,
-				CCB11BA267552381E0655FB98FE51C5B /* XNDataBaseActionUpdateProvider.m */,
-			);
-			path = Provider;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0A29527794482CD1982EBB2D7B9D5A89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7763CD1454FB35FEF2A079A801000590 /* FMDatabase.h in Headers */,
+				EBE77F2870C4DFFC85910FB11B545020 /* FMDatabaseAdditions.h in Headers */,
+				F4BECD753901EF46620C7DDA435C96CD /* FMDatabasePool.h in Headers */,
+				F47B4C2F25B6F949CB4CDD9B9FC48CF8 /* FMDatabaseQueue.h in Headers */,
+				15C6BF831852EFE25A3D4555BC60EAC1 /* FMDB-umbrella.h in Headers */,
+				4936BD848A5B9626C4CDA1AF0F811830 /* FMDB.h in Headers */,
+				58CF6C9533C3AA459EF94964C4EDE343 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0C70FC0B57078BAE6E71AF06D64FA98F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,40 +491,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B07E7C2DD17B23113F3690E100BE0AB7 /* Headers */ = {
+		6D6BAA821F226BBF2C76A03B53A93F30 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7C1D24A91E304E0616F453C51D5C901 /* FMDatabase.h in Headers */,
-				537362C8FB27F43347FF8C820282D5BF /* FMDatabaseAdditions.h in Headers */,
-				0951B9E7F6D1327A282178263A5DFC8D /* FMDatabasePool.h in Headers */,
-				46C299D805A91DD0A11C76C38790C64F /* FMDatabaseQueue.h in Headers */,
-				4FEDF0198941B8BEE548F92CA391441F /* FMDB-umbrella.h in Headers */,
-				D1B3B19965176CF3D5A199FBA347D361 /* FMDB.h in Headers */,
-				A05A6F110F95DDBCC999AB5091E8C8D9 /* FMResultSet.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CCBDF017CC87802F1583F039A5FD1FC8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC2882080D3B25BD9A66C15CC7F4089A /* DBOC-umbrella.h in Headers */,
-				C431C9CD0A3E0C51BE8D48205D9C347C /* DBOC.h in Headers */,
-				FDC1676885ED88244F387135CF88075A /* XNDataBaseActionAddProvider.h in Headers */,
-				FAD3A88BF62D84DD6E3E03A8F73FEE15 /* XNDataBaseActionBaseProvider.h in Headers */,
-				1A78F0EB4AA404C0D16ABB8A2B96C6ED /* XNDataBaseActionCondition.h in Headers */,
-				70F6908ADBEAB140130C0873936AF996 /* XNDataBaseActionConfig.h in Headers */,
-				7D24375BF294841F23AEAA96DA745CBE /* XNDataBaseActionDeleteProvider.h in Headers */,
-				F2FB06EC8A0C81FAC5384B838870B8E2 /* XNDataBaseActionLinkWord.h in Headers */,
-				9AAA5E10B28BE24C8E99E145FFEDA661 /* XNDataBaseActionQueryProvider.h in Headers */,
-				C2CE6FEA4557ABDBE9F5283819E30206 /* XNDataBaseActionUpdateProvider.h in Headers */,
-				E36B19B419217E3D50EF1A27A4F88943 /* XNDataBaseConstonts.h in Headers */,
-				F1D9E6A25A49E650D68120031D8A5239 /* XNDataBaseHelper.h in Headers */,
-				1C2A6C5C61C7FE5C482B35DF9CC6F83D /* XNDataBaseManager.h in Headers */,
-				79AD41DFC3912E9F08E613B79ABB41B9 /* XNDatabaseModel.h in Headers */,
-				E6E1905C2B5BDF871E3B545687A927FD /* XNDatabaseModelProtocol.h in Headers */,
-				9B4B63D4616B46410A687934FBB1C262 /* XNDataBaseTableConfig.h in Headers */,
+				F1899280A2312074A20803300F4EF2F9 /* DBOC-umbrella.h in Headers */,
+				D4EF555EDFE8157B34137F001E55E40F /* DBOC.h in Headers */,
+				D0334FC00F46533071EC7EBC13738145 /* XNDataBaseActionAddProvider.h in Headers */,
+				64F221262A3EC7D5DEA21F7C085558F8 /* XNDataBaseActionBaseProvider.h in Headers */,
+				246558849B8A3293A51B6CF396DF9F72 /* XNDataBaseActionCondition.h in Headers */,
+				E3879023289682BE9ECC63985B243263 /* XNDataBaseActionConfig.h in Headers */,
+				9E65A72DCCF005F088D1CEB38CFEB1C8 /* XNDataBaseActionDeleteProvider.h in Headers */,
+				6B506BB6E07CEB26D5B0B19573B131A7 /* XNDataBaseActionLinkWord.h in Headers */,
+				4981ACC583A2DBCE3F2446CAE0677F14 /* XNDataBaseActionQueryProvider.h in Headers */,
+				6A52E692ADE4FB7BC9C1E992BA1EE0E7 /* XNDataBaseActionUpdateProvider.h in Headers */,
+				F55F641857B06E90007BBCC6D87BB905 /* XNDataBaseConstonts.h in Headers */,
+				AB4D2342F04C8DA825A0ECCC13E0BA96 /* XNDataBaseHelper.h in Headers */,
+				9A1C3B14A46DFA26936471C0549E6DA1 /* XNDataBaseManager.h in Headers */,
+				66F67E5F3B9D7142B105BDE18043F88B /* XNDatabaseModel.h in Headers */,
+				4BBE6A36CFA6F7AC4AB82BCC316D1218 /* XNDatabaseModelProtocol.h in Headers */,
+				DEF99E3B61F1E7AAC0F421515DD22E7A /* XNDataBaseTableConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,8 +529,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA7206A92DD7625F416543A730497701 /* PBXTargetDependency */,
-				8A4A7FBF5199E17E425E66EF9411D3DA /* PBXTargetDependency */,
+				2873D18059B1B173EAA5CACABDB581E9 /* PBXTargetDependency */,
+				4A8E4BA87E20D197D539CA79F8CA63B7 /* PBXTargetDependency */,
 			);
 			name = "Pods-DBOC_Example";
 			productName = "Pods-DBOC_Example";
@@ -542,12 +539,12 @@
 		};
 		8592E0E389D40AC17881400ADC67ABC0 /* FMDB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF456B266A628C881693BAC4A705A451 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildConfigurationList = 1C73985BA6F3D3965784D373294A9031 /* Build configuration list for PBXNativeTarget "FMDB" */;
 			buildPhases = (
-				B07E7C2DD17B23113F3690E100BE0AB7 /* Headers */,
-				A2602B2E0A0EC9A098D5456AC574F48B /* Sources */,
-				469DCE8284F336C7521D6DFA00BB86AF /* Frameworks */,
-				34C910F334EEF1CD41545A53464A8884 /* Resources */,
+				0A29527794482CD1982EBB2D7B9D5A89 /* Headers */,
+				1471F8DF6265CC52BBA5C21C71249EC5 /* Sources */,
+				1F3B21A851C0695EF83D076A1DBF5D8F /* Frameworks */,
+				380F5337ACD7687C4C2BF060ECB84DB8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -562,7 +559,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B93B20FF9DCF615378DEDFF391F6945E /* Build configuration list for PBXNativeTarget "DBOC" */;
 			buildPhases = (
-				CCBDF017CC87802F1583F039A5FD1FC8 /* Headers */,
+				6D6BAA821F226BBF2C76A03B53A93F30 /* Headers */,
 				05CB59EFD485A2CAD53FE2B687ECE571 /* Sources */,
 				34E7D65234BAF28CC3CAE9902C94A8BD /* Frameworks */,
 				0225981DF542FEDDCF76CB5D0C2DB1CB /* Resources */,
@@ -570,7 +567,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				97EC6208C2C929BDE17B011234473FF6 /* PBXTargetDependency */,
+				DE38BD4956DE1FB8CCA4233AEE8CB79A /* PBXTargetDependency */,
 			);
 			name = DBOC;
 			productName = DBOC;
@@ -589,7 +586,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A0A5E24ED5A6A80B09A05E6DF761FD08 /* PBXTargetDependency */,
+				48AD535AFFCFC4E3D18756F86611E970 /* PBXTargetDependency */,
 			);
 			name = "Pods-DBOC_Tests";
 			productName = "Pods-DBOC_Tests";
@@ -634,7 +631,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34C910F334EEF1CD41545A53464A8884 /* Resources */ = {
+		380F5337ACD7687C4C2BF060ECB84DB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -678,6 +675,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1471F8DF6265CC52BBA5C21C71249EC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A247AB98A9B4F2BB56B366FCCA8074 /* FMDatabase.m in Sources */,
+				F5AD1C4478530FF4F6D1648BF1240373 /* FMDatabaseAdditions.m in Sources */,
+				5A80D5C2D59B5EE2DED8C1E9AA29F944 /* FMDatabasePool.m in Sources */,
+				F1A212B55FDA7C3E974D81ABC9E07BD9 /* FMDatabaseQueue.m in Sources */,
+				D851D069A84A631FDB1A1D0DEADD4E40 /* FMDB-dummy.m in Sources */,
+				1CA990BDAA6A5E378C5985013582EDDF /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E16137BA31E633A2E11F6E0B18B77FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -694,45 +704,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2602B2E0A0EC9A098D5456AC574F48B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE5D3B910FD234A81D0FB0C65E862AE2 /* FMDatabase.m in Sources */,
-				4CB3DC6AA12B1213DFD3BA1340FF2A56 /* FMDatabaseAdditions.m in Sources */,
-				F5E2601433A9728A7D8FFEED7CFEC642 /* FMDatabasePool.m in Sources */,
-				4D19D2C60A6EC1639387677E899B52B3 /* FMDatabaseQueue.m in Sources */,
-				BB44131D62767AD0D45F7F76DE884733 /* FMDB-dummy.m in Sources */,
-				451B2C8C9EFD6FE6F356FB2BE12BCC89 /* FMResultSet.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8A4A7FBF5199E17E425E66EF9411D3DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FMDB;
-			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
-			targetProxy = FD0B228B476E5252991C18358F402662 /* PBXContainerItemProxy */;
-		};
-		97EC6208C2C929BDE17B011234473FF6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FMDB;
-			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
-			targetProxy = 5A4445F6D81BFB1E96CEAABCC562186C /* PBXContainerItemProxy */;
-		};
-		A0A5E24ED5A6A80B09A05E6DF761FD08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-DBOC_Example";
-			target = 2D974304FAE8BC747D4D71E7C6CAB5B3 /* Pods-DBOC_Example */;
-			targetProxy = 465137907E6EEF303DEEB8101DB86299 /* PBXContainerItemProxy */;
-		};
-		EA7206A92DD7625F416543A730497701 /* PBXTargetDependency */ = {
+		2873D18059B1B173EAA5CACABDB581E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DBOC;
 			target = E54572F7BC9E43F5F03EE67704AE8476 /* DBOC */;
-			targetProxy = 0AA6CFCBB499A20B5A7FBD5F50B16281 /* PBXContainerItemProxy */;
+			targetProxy = F0D3B5F149E210429A2B17B6F4CFA3C7 /* PBXContainerItemProxy */;
+		};
+		48AD535AFFCFC4E3D18756F86611E970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DBOC_Example";
+			target = 2D974304FAE8BC747D4D71E7C6CAB5B3 /* Pods-DBOC_Example */;
+			targetProxy = 618B3D471D45C71E4AA1BE8AF7E1978C /* PBXContainerItemProxy */;
+		};
+		4A8E4BA87E20D197D539CA79F8CA63B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
+			targetProxy = 9D32715C247102C9BE24922220E6EE8C /* PBXContainerItemProxy */;
+		};
+		DE38BD4956DE1FB8CCA4233AEE8CB79A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 8592E0E389D40AC17881400ADC67ABC0 /* FMDB */;
+			targetProxy = 29A07BDB1DD4F1F5F67DB3F4E9873D97 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,7 +802,7 @@
 		};
 		3D0243D1B710F01B3BFE8A489C2EC46C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EC82B061DF3AE4BAA8A378A9C3A0F91 /* DBOC.debug.xcconfig */;
+			baseConfigurationReference = 6E5C333A6ADE5BB3D7330FE48616CD99 /* DBOC.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -833,7 +830,7 @@
 			};
 			name = Debug;
 		};
-		6B49A326B1833C8F1247A8B50553660B /* Release */ = {
+		54857A20956A5B71495B99DF31A759CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AD083D0DAD5612F827A73AA70405204 /* FMDB.release.xcconfig */;
 			buildSettings = {
@@ -863,6 +860,36 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		69BE20877EE99D7A79CE80163832476F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD36278E2433C2F3A0E6A23B97373671 /* FMDB.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/FMDB-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				PRODUCT_MODULE_NAME = FMDB;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		8292DC0A1183B9AC7039AD903B6AFEAC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -984,45 +1011,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E1206191ED2D94402AC82E5EE330A15B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD36278E2433C2F3A0E6A23B97373671 /* FMDB.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FMDB/FMDB-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
-				PRODUCT_MODULE_NAME = FMDB;
-				PRODUCT_NAME = FMDB;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		ED11042C78DB0D6066C0E8FC08249714 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F765B68BDEAC79740264F588F350DC93 /* DBOC.release.xcconfig */;
+			baseConfigurationReference = 3346ABAA43BAA380E87487C2FDE1A246 /* DBOC.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1119,6 +1117,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C73985BA6F3D3965784D373294A9031 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69BE20877EE99D7A79CE80163832476F /* Debug */,
+				54857A20956A5B71495B99DF31A759CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1151,15 +1158,6 @@
 			buildConfigurations = (
 				3D0243D1B710F01B3BFE8A489C2EC46C /* Debug */,
 				ED11042C78DB0D6066C0E8FC08249714 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FF456B266A628C881693BAC4A705A451 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1206191ED2D94402AC82E5EE330A15B /* Debug */,
-				6B49A326B1833C8F1247A8B50553660B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -21,10 +21,10 @@
 #import "XNDataBaseActionLinkWord.h"
 #import "XNDataBaseConstonts.h"
 #import "XNDataBaseTableConfig.h"
+#import "DBOC.h"
 #import "XNDataBaseManager.h"
 #import "XNDatabaseModel.h"
 #import "XNDatabaseModelProtocol.h"
-#import "DBOC.h"
 
 FOUNDATION_EXPORT double DBOCVersionNumber;
 FOUNDATION_EXPORT const unsigned char DBOCVersionString[];
