@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (Class)getTableMapClassWithObjcClass:(Class)cls;
 
++ (NSArray *)getSettingsList:(NSArray<NSString *> *)keys ofItem:(id)item;
++ (NSDictionary *)getSettingDictList:(NSArray<NSString *> *)keys ofItem:(id)item;
+
 @end
 
 NS_ASSUME_NONNULL_END

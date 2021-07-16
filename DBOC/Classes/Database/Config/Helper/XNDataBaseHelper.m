@@ -262,4 +262,30 @@
     return canFind;
 }
 
+
+
++ (NSArray *)getSettingsList:(NSArray<NSString *> *)keys ofItem:(id)item;
+{
+    Class cls = [item class];
+    NSMutableArray *arr = [NSMutableArray new];
+    for (NSString *key in keys) {
+        id value = [item valueForKey:key];
+        if (value) {
+            [arr addObject:value];
+        }
+    }
+    return [arr copy];
+}
+
++ (NSDictionary *)getSettingDictList:(NSArray<NSString *> *)keys ofItem:(id)item;
+{
+    Class cls = [item class];
+    NSMutableDictionary *mDict = [NSMutableDictionary new];
+    for (NSString *key in keys) {
+        id value = [item valueForKey:key];
+        [mDict setObject:value forKey:key];
+    }
+    return [mDict copy];
+}
+
 @end

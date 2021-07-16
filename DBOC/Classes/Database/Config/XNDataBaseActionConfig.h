@@ -70,7 +70,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindWhere; // where的情况下
 - (XNDataBaseActionConfig * (^)(id keyfield))bindWhereF; // where的情况下
 
+- (XNDataBaseActionConfig * (^)(void))bindAnd; // and 的情况下
+- (XNDataBaseActionConfig * (^)(id keyField))bindAndF; // and 的情况下
+
 - (XNDataBaseActionConfig * (^)(NSInteger count))limitCount; // limit count 的情况下
+
+// 排列
+- (XNDataBaseActionConfig * (^)(NSString *keyField, NSString *desc,xnDataBaseValueType caseType))orderbyCast; // limit count 的情况下
+- (XNDataBaseActionConfig * (^)(NSString *keyField, NSString *desc))orderby; // limit count 的情况下
+
+
 
 //  有关的不等式
 - (XNDataBaseActionConfig * (^)(id value))bindEqualTo;
@@ -80,6 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (XNDataBaseActionConfig * (^)(id value))bindGreaterThanOrEqual;
 - (XNDataBaseActionConfig * (^)(id value))bindNotEqual;
 - (XNDataBaseActionConfig * (^)(id value))bindIn;
+- (XNDataBaseActionConfig * (^)(id value))bindNotIn;
 
 
 #pragma mark - 查询
@@ -106,10 +116,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) id updateData; // 更新一个对象 + where 判断条件 【必须要有判断条件】
 -(XNDataBaseActionConfig * (^)(id updateData))bindUpdateData;
 
-@property (nonatomic, strong, readonly) NSDictionary *updateListData; // 更新一个对象里面的几个属性 ， 判断条件 （这个可以没有判断条件，表示的是所有的）
--(XNDataBaseActionConfig * (^)(NSDictionary *updateListData))bindUpdateListData;
+@property (nonatomic, strong, readonly) NSDictionary *settingListData; // 更新一个对象里面的几个属性 ， 判断条件 （这个可以没有判断条件，表示的是所有的） , 这个地方可能是更新、或者删除
+-(XNDataBaseActionConfig * (^)(NSDictionary *settingListData))bindsettingListData;
+
 
 @end
-
 
 NS_ASSUME_NONNULL_END

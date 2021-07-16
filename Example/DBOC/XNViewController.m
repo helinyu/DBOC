@@ -56,9 +56,18 @@
 //        config.bindT(XNDataModel);
         config.b_class(XNDataModel);
         config.b_cls(XNDataModel);
+        config.orderbyCast(kCP(XNDataModel, name),DB_DESC, xnDataBaseValueTypeInt);
+        config.bindWhereF(db_field_length(kCP(XNDataModel, name)));
     } then:^(BOOL result, id  _Nullable value) {
         
     }];
+//    kCreateFromCls(XNDataModel, nil);
+    //#define kCreateFromCls(cls, config) [kDBMgr createTableFromClass:cls.class config:config]
+    
+//    kCreateFromCls(XNDataModel, nil);
+//    kCreateFromCls(XNDatabaseModel, nil);
+//    kCP(XNDataModel, name);
+    
 }
 
 - (void)test:(NSString *)test {

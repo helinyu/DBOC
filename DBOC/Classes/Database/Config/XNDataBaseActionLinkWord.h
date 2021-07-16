@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, XNDataBaseActionLinkWordType) {
     XNDataBaseActionLinkWordTypeWhere, // whare
     XNDataBaseActionLinkWordTypeAnd, // and
     XNDataBaseActionLinkWordTypeOr, // or
-    XNDataBaseActionLinkWordTypeOrderBy, // orderBy
+    XNDataBaseActionLinkWordTypeOrderBy, // orderBy , 后面可以接入多个值
     XNDataBaseActionLinkWordTypeLimit, // limit
 };
 

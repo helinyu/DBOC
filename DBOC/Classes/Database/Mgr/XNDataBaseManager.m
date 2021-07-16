@@ -28,6 +28,13 @@ static NSString *const kNewMinuKey = @"new_minu";
 
 @implementation XNDataBaseManager
 
+- (void)executeUpdateSql:(NSString *)sql{
+    [_dbQueue inDatabase:^(FMDatabase *db) {
+        [db executeUpdate:sql];
+    }];
+}
+
+
 #pragma mark -- 创建数据库
 
 + (instancetype)shareManager {
@@ -272,7 +279,7 @@ static NSString *const kNewMinuKey = @"new_minu";
 
 
 // sync method 同步方法
-- (NSDictionary *)asynAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
+- (NSDictionary *)syncAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
 {
     __block NSMutableDictionary *mDict = [NSMutableDictionary new];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
@@ -293,21 +300,21 @@ static NSString *const kNewMinuKey = @"new_minu";
     return [mDict copy];
 }
 
-- (NSDictionary *)syncSelectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (NSDictionary *)syncSelectBuilder:(DatabaseActionConfigBlock)builderBlock;
 {
-    return [self asynAction:XNDataBaseActionTypeSelect builder:builderBlock];
+    return [self syncAction:XNDataBaseActionTypeSelect builder:builderBlock];
 }
-- (NSDictionary *)syncUpdateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (NSDictionary *)syncUpdateBuilder:(DatabaseActionConfigBlock)builderBlock;
 {
-    return [self asynAction:XNDataBaseActionTypeUpdate builder:builderBlock];
+    return [self syncAction:XNDataBaseActionTypeUpdate builder:builderBlock];
 }
-- (NSDictionary *)syncDeleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (NSDictionary *)syncDeleteBuilder:(DatabaseActionConfigBlock)builderBlock;
 {
-    return [self asynAction:XNDataBaseActionTypeDelete builder:builderBlock];
+    return [self syncAction:XNDataBaseActionTypeDelete builder:builderBlock];
 }
-- (NSDictionary *)syncInsertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (NSDictionary *)syncInsertBuilder:(DatabaseActionConfigBlock)builderBlock;
 {
-   return [self asynAction:XNDataBaseActionTypeInsert builder:builderBlock];
+   return [self syncAction:XNDataBaseActionTypeInsert builder:builderBlock];
 }
 
 #pragma mark - help method

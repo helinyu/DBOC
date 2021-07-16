@@ -15,11 +15,17 @@
 
 #define kDBMgr ([XNDataBaseManager shareManager])
 
+#define kCreateFromCls(classname,config) ((classname *)[[XNDataBaseManager shareManager] createTableFromClass:classname.class config:config])
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XNDataBaseManager : NSObject
 
+- (void)executeUpdateSql:(NSString *)sql; // 保留原生的执行sql的语句
+
 + (instancetype)shareManager;
+
 
 // 表操作
 - (BOOL)createTableFromClass:(Class)tableClass config:(XNDataBaseTableConfig  *_Nullable)config;
@@ -37,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - sync method
 // 同步的的请求方式， 这个不推荐使用
 
-- (NSDictionary *)asynAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
+- (NSDictionary *)syncAction:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock;
 
 - (NSDictionary *)syncSelectBuilder:(DatabaseActionConfigBlock)builderBlock;
 - (NSDictionary *)syncUpdateBuilder:(DatabaseActionConfigBlock)builderBlock;

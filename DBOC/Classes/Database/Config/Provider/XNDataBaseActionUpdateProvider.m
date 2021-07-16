@@ -17,7 +17,7 @@
     NSString *linkWordSql = [self.config.firstLinkWordCondition conditionText];
     
     BOOL updateOneObj = (self.config.updateData && linkWordSql.length >0);
-    BOOL updateListSomeProp = self.config.updateListData;
+    BOOL updateListSomeProp = self.config.settingListData;
    
     if (!updateOneObj && updateListSomeProp) {
         !self.resultBlock? :self.resultBlock(NO, nil);
@@ -39,11 +39,11 @@
              keyValueStr = [keyValueArray componentsJoinedByString:@","];
         }
         else {
-            NSDictionary *updateListData = self.config.updateListData;
-            NSArray *propertiesArray = updateListData.allKeys;
+            NSDictionary *settingListData = self.config.settingListData;
+            NSArray *propertiesArray = settingListData.allKeys;
             NSMutableArray * keyValueArray = [NSMutableArray array];
             [propertiesArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                id value = [updateListData objectForKey:obj];
+                id value = [settingListData objectForKey:obj];
                 NSString *keyValue = [value isKindOfClass:[NSString class]] ? [NSString stringWithFormat:@"%@='%@'", obj, value]: [NSString stringWithFormat:@"%@=%@", obj, value];
                 [keyValueArray addObject:keyValue];
             }];

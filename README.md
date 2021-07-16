@@ -30,3 +30,10 @@ helinyu, 2319979647@qq.com
 ## License
 
 DBOC is available under the MIT license. See the LICENSE file for more info.
+
+
+遗留问题：
+1)order by 后面可以接入多个值
+2) 有就更新， 没有就插入，有没有这样的需求？
+3) //        NSString *sql = [NSString stringWithFormat:@"select comic_name as comicName,chapter_name as chapterName,urls from ComicChapter where length(urls) > 0 and comic_id = '%@';",model.comic_id];
+ 这个length的函数的写法， 看看这个要怎么写

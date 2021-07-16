@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 所有的类都需要继承这个类
 @interface XNDatabaseModel : NSObject <XNDatabaseModelProtocol>
 
+- (NSArray *)getValues:(NSArray<NSString *> *)keys;
+- (NSDictionary *)getValueDictList:(NSArray<NSString *> *)keys;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -79,6 +79,7 @@
     };
 }
 
+
 -(XNDataBaseActionConfig * (^)(NSArray *batchList))bindBatchList;
 {
     return ^id(NSArray *batchList){
@@ -180,6 +181,44 @@
     };
 }
 
+- (XNDataBaseActionConfig * (^)(void))bindAnd; // and 的情况下
+{
+    return ^id(){
+        self.bindLinkword(XNDataBaseActionLinkWordTypeAnd);
+        return self;
+    };
+}
+- (XNDataBaseActionConfig * (^)(id keyfield))bindAndF; // and 的情况下
+{
+    return ^id(id keyfield){
+        self.bindLinkword(XNDataBaseActionLinkWordTypeAnd);
+        self.bindConditionValue(keyfield);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(NSString *keyField, NSString *desc,xnDataBaseValueType caseType))orderbyCast;
+{
+    return ^id(NSString *keyField, NSString *desc,xnDataBaseValueType caseType) {
+        self.bindLinkword(XNDataBaseActionLinkWordTypeOrderBy);
+        self.bindConditionValue(keyField);
+        self.bindConditionValue(desc);
+#warning  -- 这个需要去处理
+        self.bindConditionValue(@(caseType)); // 这个需要处理
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(NSString *keyField, NSString *desc))orderby;
+{
+    return ^id(NSString *keyField, NSString *desc) {
+        self.bindLinkword(XNDataBaseActionLinkWordTypeOrderBy);
+        self.bindConditionValue(keyField);
+        self.bindConditionValue(desc);
+        return self;
+    };
+}
+
 - (XNDataBaseActionConfig * (^)(NSInteger count))limitCount; // limit count 的情况下
 {
     return ^id(NSInteger count){
@@ -222,10 +261,10 @@
     };
 }
 
--(XNDataBaseActionConfig * (^)(NSDictionary *updateListData))bindUpdateListData;
+-(XNDataBaseActionConfig * (^)(NSDictionary *settingListData))bindsettingListData;
 {
-    return ^id(NSDictionary *updateListData) {
-        self->_updateListData = updateListData;
+    return ^id(NSDictionary *settingListData) {
+        self->_settingListData = settingListData;
         return self;
     };
 }
@@ -289,6 +328,14 @@
     return ^id(id value) {
         self.bindRelative(XNDataValueRelationIn);
         self.bindConditionValue(value);
+        return self;
+    };
+}
+- (XNDataBaseActionConfig * (^)(id value))bindNotIn;
+{
+    return ^id(id value) {
+        self.bindRelative(XNDataValueRelationNotIn);
+        self.bindConditionValue(value); // 拼接有关的内容
         return self;
     };
 }

@@ -7,6 +7,7 @@
 //
 
 #import "XNDatabaseModel.h"
+#import "XNDataBaseHelper.h"
 
 @implementation XNDatabaseModel
 
@@ -25,5 +26,16 @@
 {
     return @[];
 }
+
+- (NSDictionary *)getValues:(NSArray<NSString *> *)keys
+{
+    return [XNDataBaseHelper getSettingDictList:keys ofItem:self];
+}
+
+- (NSArray *)getValueDictList:(NSArray<NSString *> *)keys {
+    return [XNDataBaseHelper getSettingsList:keys ofItem:self];
+}
+
+
 
 @end
