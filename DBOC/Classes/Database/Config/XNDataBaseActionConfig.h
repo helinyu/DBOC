@@ -14,6 +14,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 目前暂时支持单个 更新和插入， 批量的删除和插入还需要处理
 
+#define b_table(x) bindTableName(x.class)
+#define b_tableClass(x) tableMapClass(x.class)
+#define b_class(x) bindObjcClass(x.class)
+
+#define b_batchList(x) bindBatchList(x)
+
+#define b_keyField(x) bindConditionValue(x)
+#define b_keyValue(x) bindConditionValue(x)
+#define b_relate(x) bindRelative(x)
+#define b_linkWord(x) bindLinkword(x)
+#define b_inequality(x,y,z) bindInequality(x, y, z)
+
+//bindWhereF
+#define whereF(field) bindWhereF(field)
+//#define where(x, y, z) bindWhere(x,y,z)
+#define where(...) bindWhere(__VA_ARGS__)
+
+
+
 @interface XNDataBaseActionConfig : NSObject
 
 @property (nonatomic, assign) XNDataBaseActionType actionType; // 操作的类型
@@ -32,9 +51,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) XNDataBaseActionLinkWord *firstLinkWordCondition; // 连接词的处理
 @property (nonatomic, strong, readonly) XNDataBaseActionLinkWord *currentLinkWordCondition; // 当前的连接词处理
 
--(XNDataBaseActionConfig * (^)(XNDataValueRelation relation))relative;
--(XNDataBaseActionConfig * (^)(id conditionValue))conditionValue;
--(XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword))linkword;
+-(XNDataBaseActionConfig * (^)(XNDataValueRelation relation))bindRelative;
+-(XNDataBaseActionConfig * (^)(id conditionValue))bindConditionValue;
+-(XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword))bindLinkword;
+
+- (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindInequality; // 控制的条件
+
+- (XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword,id keyfield, XNDataValueRelation relate, id value))bindCondition; // 控制的条件
+- (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindWhere; // where的情况下
+- (XNDataBaseActionConfig * (^)(id keyfield))bindWhereF; // where的情况下
+
+
+// 更加方便的方法
 
 #pragma mark - 查询
 @property (nonatomic, strong, readonly) NSArray<NSString *> *queryColumnFields; // 查询指定的字段

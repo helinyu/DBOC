@@ -19,15 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     [[XNDataBaseManager shareManager] createTableFromClass:[XNDataModel class] config:nil];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onBatchInsert:(id)sender {
@@ -39,12 +32,16 @@
     item1.name = @"helinyu1";
     item1.age = 21;
     
+    kCP(XNDataModel, name);
+    NSArray *items = @[item0, item1];
     [[XNDataBaseManager shareManager] action:XNDataBaseActionTypeInsert builder:^(XNDataBaseActionConfig *config) {
-        config.bindObjcClass([XNDataModel class]);
-        config.bindBatchList(@[item0, item1]);
-        } then:^(BOOL result, id  _Nullable value) {
-            NSLog(@"lt insert batch :%zd, %@",result, value);
-        }];
+        config.b_class(XNDataModel).b_batchList(items);
+        config.bindConditionValue(kCP(XNDataModel, name));
+//        config.bindWhereF(kCP(XNDataModel, name));
+        config.whereF(kCP(XNDataModel, name));
+    } then:^(BOOL result, id  _Nullable value) {
+        NSLog(@"lt insert batch :%hhd, %@",result, value);
+    }];
 }
 
 @end

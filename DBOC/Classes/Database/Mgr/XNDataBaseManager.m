@@ -243,7 +243,6 @@ static NSString *const kNewMinuKey = @"new_minu";
 - (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
         XNDataBaseActionConfig *config = [XNDataBaseActionConfig new];
         config.actionType = actionType;
         !builderBlock? :builderBlock(config);

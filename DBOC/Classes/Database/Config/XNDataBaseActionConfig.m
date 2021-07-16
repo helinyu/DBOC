@@ -103,7 +103,7 @@
 }
 
 
--(XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword))linkword{
+-(XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword))bindLinkword{
     return ^id(XNDataBaseActionLinkWordType linkword) {
         if (!self.currentLinkWordCondition) {
             XNDataBaseActionLinkWord *newLinkWord = [XNDataBaseActionLinkWord new];
@@ -130,7 +130,48 @@
     };
 }
 
--(XNDataBaseActionConfig * (^)(id conditionValue))conditionValue{
+- (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindInequality; // 控制的条件
+{
+    return ^id(id keyfield, XNDataValueRelation relate, id value){
+        self.bindConditionValue(keyfield);
+        self.bindRelative(relate);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(XNDataBaseActionLinkWordType linkword,id keyfield, XNDataValueRelation relate, id value))bindCondition; // 控制的条件
+{
+    return ^id(XNDataBaseActionLinkWordType linkword,id keyfield, XNDataValueRelation relate, id value){
+        self.bindLinkword(linkword);
+        self.bindConditionValue(keyfield);
+        self.bindRelative(relate);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id keyfield, XNDataValueRelation relate, id value))bindWhere; // where的情况下
+{
+    return ^id(id keyfield, XNDataValueRelation relate, id value){
+        self.bindLinkword(XNDataBaseActionLinkWordTypeWhere);
+        self.bindConditionValue(keyfield);
+        self.bindRelative(relate);
+        self.bindConditionValue(value);
+        return self;
+    };
+}
+
+- (XNDataBaseActionConfig * (^)(id keyfield))bindWhereF; // where的情况下
+{
+    return ^id(id keyfield){
+        self.bindLinkword(XNDataBaseActionLinkWordTypeWhere);
+        self.bindConditionValue(keyfield);
+        return self;
+    };
+}
+
+-(XNDataBaseActionConfig * (^)(id conditionValue))bindConditionValue{
     return ^id(id conditionValue){
         if (self.currentLinkWordCondition) {
             if (self.currentLinkWordCondition.condition.field.length <=0) {
@@ -144,7 +185,7 @@
     };
 }
 
--(XNDataBaseActionConfig * (^)(XNDataValueRelation relation))relative{
+-(XNDataBaseActionConfig * (^)(XNDataValueRelation relation))bindRelative{
     return ^id(XNDataValueRelation relation){
         if (self.currentLinkWordCondition) {
             self.currentLinkWordCondition.condition.relation = relation;

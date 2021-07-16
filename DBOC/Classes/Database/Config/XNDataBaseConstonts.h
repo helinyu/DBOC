@@ -31,10 +31,8 @@ typedef NS_ENUM(NSInteger, XNDataBaseActionType) {
     XNDataBaseActionTypeUpdate = 4,
 };
 
-typedef NS_ENUM(NSInteger, XNDataBaseOrderType) {
-    XNDataBaseOrderTypeASCE = 0,
-    XNDataBaseOrderTypeDESC = 1,
-};
+#define ASCE asce // 递增
+#define DESC desc // 递减
 
 // 有关的关系
 // 白名单 > 黑名单
@@ -46,5 +44,6 @@ typedef void(^DataBaseActionResultBlock)(BOOL result,id _Nullable value);
 typedef id(^DataBaseActionBuildSqlBlock)(NSString *sql, NSArray *values);
 
 #define kClassField(CLASS, field) @(((void)(NO && ((void)((CLASS *)(nil)).field, NO)), #field))
+#define kCP(cls, field) kClassField(cls, field)
 
 #endif /* XNDataBaseConstonts_h */
