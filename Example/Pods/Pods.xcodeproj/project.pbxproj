@@ -39,6 +39,7 @@
 		C2DD11507797205B00F521F9944CD8E6 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4983DC1580F5854B6A051CA7793E6937 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB0644F414CDE31A406D4CA6851BE8E8 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ABAC87F0D8409475F68A59DD49201C /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		D27584CE60CE0AF5369122EA51058232 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F5050F82A26CC1B35685AF74F29FC1 /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D415D11C26A134D700B54716 /* DBOC.h in Headers */ = {isa = PBXBuildFile; fileRef = D415D11B26A134D700B54716 /* DBOC.h */; };
 		F0FC93E44E13025D782FD274AB097844 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5089FBB0BEE025338645FE5430ADDCAC /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2B0F602CBF398CAE8003D20FDCAC5AD /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC7FCB163982668F35644CC9927F08C /* FMDB-dummy.m */; };
 /* End PBXBuildFile section */
@@ -111,6 +112,7 @@
 		C93E48EC9CA2B7AE6D1EEE11A0C8D3E7 /* Pods-DBOC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DBOC_Example-dummy.m"; sourceTree = "<group>"; };
 		CB6151788848E623C9EB83A2E662DE65 /* Pods-DBOC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DBOC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CD4D247B56F3C354FB04D528D1587258 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D415D11B26A134D700B54716 /* DBOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBOC.h; path = ../DBOC.h; sourceTree = "<group>"; };
 		D4E3AD5D26931B06005D374B /* XNDataBaseTableConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseTableConfig.m; sourceTree = "<group>"; };
 		D4E3AD5E26931B06005D374B /* XNDataBaseActionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNDataBaseActionConfig.m; sourceTree = "<group>"; };
 		D4E3AD5F26931B06005D374B /* XNDataBaseActionCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNDataBaseActionCondition.h; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		D4E3AD5B26931B06005D374B /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				D415D11B26A134D700B54716 /* DBOC.h */,
 				D4E3AD5C26931B06005D374B /* Config */,
 				D4E3AD7426931B06005D374B /* Mgr */,
 				D4E3AD7726931B06005D374B /* Model */,
@@ -446,6 +449,7 @@
 				F0FC93E44E13025D782FD274AB097844 /* FMDatabaseAdditions.h in Headers */,
 				ABE825A26524CD737D64DCADA392D3CF /* FMDatabasePool.h in Headers */,
 				99569CCE209AE99E75696AC2F453FC1F /* FMDatabaseQueue.h in Headers */,
+				D415D11C26A134D700B54716 /* DBOC.h in Headers */,
 				D27584CE60CE0AF5369122EA51058232 /* FMDB-umbrella.h in Headers */,
 				C2DD11507797205B00F521F9944CD8E6 /* FMDB.h in Headers */,
 				917BD58821CB323746FB67CCFC341BD5 /* FMResultSet.h in Headers */,
