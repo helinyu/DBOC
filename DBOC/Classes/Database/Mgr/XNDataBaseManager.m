@@ -252,6 +252,23 @@ static NSString *const kNewMinuKey = @"new_minu";
     });
 }
 
+- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    [self action:XNDataBaseActionTypeSelect builder:builderBlock then:resultBlock];
+}
+- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    [self action:XNDataBaseActionTypeUpdate builder:builderBlock then:resultBlock];
+}
+- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    [self action:XNDataBaseActionTypeDelete builder:builderBlock then:resultBlock];
+}
+- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+{
+    [self action:XNDataBaseActionTypeInsert builder:builderBlock then:resultBlock];
+}
+
 #pragma mark - help method
 
 - (BOOL)tableExist:(NSString *)tableName {

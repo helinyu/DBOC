@@ -10,6 +10,8 @@
 @class XNDataBaseTableConfig, XNDataBaseActionConfig;
 
 
+#define kDBMgr ([XNDataBaseManager shareManager])
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XNDataBaseManager : NSObject
@@ -21,6 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 //数据操作
 - (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+
+
+// convinice method
+- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
 
 @end
 

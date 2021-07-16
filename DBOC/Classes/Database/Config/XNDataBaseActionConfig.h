@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 目前暂时支持单个 更新和插入， 批量的删除和插入还需要处理
 
 #define b_table(x) bindTableName(x.class)
-#define b_tableClass(x) tableMapClass(x.class)
+#define b_tableClass(x) bindTableMapClass(x.class)
 #define b_class(x) bindObjcClass(x.class)
 
 #define b_batchList(x) bindBatchList(x)
