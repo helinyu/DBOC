@@ -11,12 +11,12 @@
 
 @implementation NSDictionary (DBAdd)
 
-- (id)result;
+- (id)db_data;
 {
    return [self objectForKey:kDB_actionResultKey];
 }
 
-- (BOOL)actionFlag;
+- (BOOL)db_actionSuc;
 {
     return [[self objectForKey:kDB_actionFlagKey] boolValue];
 }

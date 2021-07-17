@@ -71,7 +71,7 @@ static NSString *const kNewMinuKey = @"new_minu";
 
 - (BOOL)createTableFromClass:(Class)tableClass withTableName:(NSString *)tableName config:(XNDataBaseTableConfig *)config {
     
-    if (![tableClass isSubclassOfClass:[XNDatabaseModel class]]) {
+    if (![XNDataBaseHelper getTableMapClassWithObjcClass:tableClass]) {
 #if DEBUG
         NSAssert(1>2, @"数据库模型需要 是 XNDatabaseModel 的子类 【暂时】");
 #endif
@@ -247,7 +247,7 @@ static NSString *const kNewMinuKey = @"new_minu";
     }
 }
 
-- (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         XNDataBaseActionConfig *config = [XNDataBaseActionConfig new];
@@ -260,19 +260,19 @@ static NSString *const kNewMinuKey = @"new_minu";
 }
 
 // convinice method
-- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 {
     [self action:XNDataBaseActionTypeSelect builder:builderBlock then:resultBlock];
 }
-- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 {
     [self action:XNDataBaseActionTypeUpdate builder:builderBlock then:resultBlock];
 }
-- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 {
     [self action:XNDataBaseActionTypeDelete builder:builderBlock then:resultBlock];
 }
-- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 {
     [self action:XNDataBaseActionTypeInsert builder:builderBlock then:resultBlock];
 }

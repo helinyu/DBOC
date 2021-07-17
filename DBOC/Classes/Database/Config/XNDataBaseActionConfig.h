@@ -14,9 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 目前暂时支持单个 更新和插入， 批量的删除和插入还需要处理
 
+// 这些属性应该进行分化这些内容
+
 #define b_table(x) bindTableName(x.class)
 #define b_tableClass(x) bindTableMapClass(x.class)
 #define b_class(x) bindObjcClass(x.class)
+
+#define b_t(x) b_table(x)
+#define b_tc(x) b_tableClass(x)
 #define b_cls(x) b_class(x)
 
 #define b_batchList(x) bindBatchList(x)
@@ -124,6 +129,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) NSString *countKeyField;
 -(XNDataBaseActionConfig * (^)(NSString *keyField))count;
+
+@property (nonatomic, assign, readonly) BOOL negateToAction; // 默认NO：强制执行操作， YES： 尽可能的不操作
+-(XNDataBaseActionConfig * (^)(BOOL flag))bindNegateToAction;
 
 @end
 

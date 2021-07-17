@@ -9,11 +9,10 @@
 #import "XNDataBaseConstonts.h"
 @class XNDataBaseTableConfig, XNDataBaseActionConfig;
 
-
 #define kDBMgr ([XNDataBaseManager shareManager])
 
-#define kCreateFromCls(classname,config) ((classname *)[[XNDataBaseManager shareManager] createTableFromClass:classname.class config:config])
 
+#define kCreateFromCls(cls,c) ([kDBMgr createTableFromClass:cls.class config:c])
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,14 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)createTableFromClass:(Class)tableClass config:(XNDataBaseTableConfig  *_Nullable)config;
 
 //数据操作
-- (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)action:(XNDataBaseActionType)actionType builder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 
 
 // convinice method
-- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
-- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
-- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
-- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock)resultBlock;
+- (void)selectBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
+- (void)updateBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
+- (void)deleteBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
+- (void)insertBuilder:(DatabaseActionConfigBlock)builderBlock then:(DataBaseActionResultBlock _Nullable)resultBlock;
 
 #pragma mark - sync method
 // 同步的的请求方式， 这个不推荐使用

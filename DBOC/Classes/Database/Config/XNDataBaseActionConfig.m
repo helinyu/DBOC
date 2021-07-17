@@ -348,4 +348,12 @@
     };
 }
 
+-(XNDataBaseActionConfig * (^)(BOOL flag))bindNegateToAction;
+{
+    return ^id(BOOL flag) {
+        self->_negateToAction = flag;
+        return self;
+    };
+}
+
 @end

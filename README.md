@@ -37,3 +37,9 @@ DBOC is available under the MIT license. See the LICENSE file for more info.
 2) 有就更新， 没有就插入，有没有这样的需求？
 3) //        NSString *sql = [NSString stringWithFormat:@"select comic_name as comicName,chapter_name as chapterName,urls from ComicChapter where length(urls) > 0 and comic_id = '%@';",model.comic_id];
  这个length的函数的写法， 看看这个要怎么写
+ 
+ 4） 获取对应的有关方法，如果当前类没有，直接用这个item的class来进行判断
+ > 1: tablename > 2:tableMapClass > 3:tableObjClass > item.class 【获取的优先权】
+5 ） 更新要处理好， 没有数据就插入，有数据就更新的逻辑
+6） 更新、删除等，都是有单个、或者集合的 ， 所以都有item， 以及list内容
+7）

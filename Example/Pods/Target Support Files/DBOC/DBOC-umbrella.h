@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSDictionary+DBAdd.h"
 #import "XNDataBaseHelper.h"
 #import "XNDataBaseActionAddProvider.h"
 #import "XNDataBaseActionBaseProvider.h"

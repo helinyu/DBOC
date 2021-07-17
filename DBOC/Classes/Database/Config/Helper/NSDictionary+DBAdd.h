@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary (DBAdd)
 
-- (id)result; // 结果
-- (BOOL)actionFlag; //执行是否成功
+- (id)db_data; // 结果
+- (BOOL)db_actionSuc; //执行是否成功
 
 @end
 
