@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DBOC'
-  s.version          = '0.6.8'
+  s.version          = '0.6.9'
   s.summary          = 'database more easy to use'
 
 # This description is used to generate tags and improve search results.
