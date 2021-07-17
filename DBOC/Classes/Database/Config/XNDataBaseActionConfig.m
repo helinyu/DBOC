@@ -356,4 +356,34 @@
     };
 }
 
+
+//case when read_time > 0.0 then datetime(read_time,'unixepoch','localtime') else collect_time end)
+-(XNDataBaseActionConfig * (^)(XNDataBaseActionCondition *condition, id val0, id val1))bindCase;
+{
+    return ^id(XNDataBaseActionCondition *condition, id val0, id val1) {
+        self->_condition = condition;
+        self->_conditionVal0 = val0;
+        self->_conditionVal1 = val1;
+        return self;
+    };
+}
+
+
+-(XNDataBaseActionConfig * (^)(NSArray<NSString *> *keyfields))bindWhiteList;
+{
+    return ^id(NSArray<NSString *> *keyfields) {
+        self->_whiteList = keyfields;
+        self->_hasSetWhiteOrBlackList = YES;
+        return self;
+    };
+}
+-(XNDataBaseActionConfig * (^)(NSArray<NSString *> *keyfields))bindBlackList;
+{
+    return ^id(NSArray<NSString *> *keyfields) {
+        self->_blackList = keyfields;
+        self->_hasSetWhiteOrBlackList = YES;
+        return self;
+    };
+}
+
 @end

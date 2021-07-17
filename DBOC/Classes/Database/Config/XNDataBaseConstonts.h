@@ -102,6 +102,11 @@ static const NSString * _Nullable db_alias_feild_name(NSString * keyfield, NSStr
     return [NSString stringWithFormat:@" %@ as %@ ",keyfield, aliasName];
 }
 
+static const NSString * _Nullable db_datetime(NSString *keyfield, NSString *unixepoch, NSString *localtime) {
+    return [NSString stringWithFormat:@"datetime(%@,'%@','%@')",keyfield, unixepoch, localtime];
+}
+
+
 #ifdef __cplusplus
 }
 #endif

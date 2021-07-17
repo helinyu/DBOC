@@ -133,6 +133,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL negateToAction; // 默认NO：强制执行操作， YES： 尽可能的不操作
 -(XNDataBaseActionConfig * (^)(BOOL flag))bindNegateToAction;
 
+//case when read_time > 0.0 then datetime(read_time,'unixepoch','localtime') else collect_time end)
+@property (nonatomic, strong) XNDataBaseActionCondition *condition; // 如果这里是多个控制条件， 要怎么处理
+@property (nonatomic) id conditionVal0;
+@property (nonatomic) id conditionVal1;
+-(XNDataBaseActionConfig * (^)(XNDataBaseActionCondition *condition, id val0, id val1))bindCase;
+
+@property (nonatomic, strong, readonly) NSArray<NSString *> *whiteList; // 白名单
+@property (nonatomic, strong, readonly) NSArray<NSString *> *blackList; // 黑名单
+@property (nonatomic, assign, readonly) BOOL hasSetWhiteOrBlackList;
+-(XNDataBaseActionConfig * (^)(NSArray<NSString *> *keyfields))bindWhiteList;
+-(XNDataBaseActionConfig * (^)(NSArray<NSString *> *keyfields))bindBlackList;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
