@@ -340,4 +340,12 @@
     };
 }
 
+-(XNDataBaseActionConfig * (^)(NSString *keyField))count;
+{
+    return ^id(NSString *keyField) {
+        self->_countKeyField = keyField;
+        return self;
+    };
+}
+
 @end

@@ -10,9 +10,6 @@
 @class XNDataBaseTableConfig, XNDataBaseActionConfig;
 
 
-#define kDB_actionFlagKey @"dboc.action.suc.flag"
-#define kDB_actionResultKey @"dboc.action.result"
-
 #define kDBMgr ([XNDataBaseManager shareManager])
 
 #define kCreateFromCls(classname,config) ((classname *)[[XNDataBaseManager shareManager] createTableFromClass:classname.class config:config])

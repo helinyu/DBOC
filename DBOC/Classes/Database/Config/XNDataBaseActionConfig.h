@@ -47,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *tableName;// 对应的表的名字
 @property (nonatomic, copy, readonly) Class tableMapClass;// table 映射的对象
 @property (nonatomic, copy, readonly) Class objectClass;// 数据使用的对象
+// tableName tableMapClass 对应的就是数据库的类；
+// objectClass 对应的是另外一个对象， 我们要获取的对象
+
 
 -(XNDataBaseActionConfig * (^)(NSString *tableName))bindTableName;
 -(XNDataBaseActionConfig * (^)(Class cls))bindTableMapClass;
@@ -119,6 +122,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSDictionary *settingListData; // 更新一个对象里面的几个属性 ， 判断条件 （这个可以没有判断条件，表示的是所有的） , 这个地方可能是更新、或者删除
 -(XNDataBaseActionConfig * (^)(NSDictionary *settingListData))bindsettingListData;
 
+@property (nonatomic, strong, readonly) NSString *countKeyField;
+-(XNDataBaseActionConfig * (^)(NSString *keyField))count;
 
 @end
 

@@ -18,5 +18,6 @@
 #import "XNDatabaseModelProtocol.h"
 #import "XNDatabaseModel.h"
 #import "XNDataBaseManager.h"
+#import "NSDictionary+DBAdd.h"
 
 #endif /* DBOC_h */

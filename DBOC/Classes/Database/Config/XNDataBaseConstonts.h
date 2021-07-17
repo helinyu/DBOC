@@ -45,6 +45,10 @@ typedef NS_ENUM(NSInteger, xnDataBaseValueType) {
 #define DB_ASCE @"asce" // 递增
 #define DB_DESC @"desc" // 递减
 
+#define kAll @"*"   // sql 语句中的所有
+
+#define kDB_actionFlagKey @"dboc.action.suc.flag"
+#define kDB_actionResultKey @"dboc.action.result"
 
 
 // 有关的关系
@@ -58,6 +62,7 @@ typedef id(^DataBaseActionBuildSqlBlock)(NSString *sql, NSArray *values);
 
 #define kClassField(CLASS, field) @(((void)(NO && ((void)((CLASS *)(nil)).field, NO)), #field))
 #define kCP(cls, field) kClassField(cls, field)
+
 
 
 
@@ -93,7 +98,9 @@ static const NSString * _Nullable db_cast(NSString * _Nullable keyfield, xnDataB
     return [NSString stringWithFormat:@"cast(%@ as %@)",keyfield, stringForValueType(valueType)];
 }
 
-
+static const NSString * _Nullable db_alias_feild_name(NSString * keyfield, NSString *aliasName) {
+    return [NSString stringWithFormat:@" %@ as %@ ",keyfield, aliasName];
+}
 
 #ifdef __cplusplus
 }
